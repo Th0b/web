@@ -1,22 +1,19 @@
-import Head from "next/head";
+//Styles
+import styles from "../styles/Index.module.sass";
+//Components
+import Header from "../components/Header";
 
 export default function Home() {
   return (
     <>
-      <Head>
-        <title>The Tob</title>
-        <meta
-          name="description"
-          content="Webové stránka mistra Tobiáše Návrata"
-        />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+      <Header />
       <main>
         <div>
           <h1>Vítejte na mém webu</h1>
           <p>Ale ne dnes...</p>
         </div>
       </main>
+      <footer>Copyright&copy;2022</footer>
     </>
   );
 }
