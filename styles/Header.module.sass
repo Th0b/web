@@ -3,9 +3,6 @@
 .header
     height: 80px
     width: 100vw
-    display: flex
-    align-items: center
-    justify-content: space-between
     background-color: $primaryColor
 
 .logo
@@ -13,12 +10,40 @@
     width: 60px
     margin: 10px 20px
     position: relative
+    float: left
 
 .pageNavigation
+    height: 60px
     margin: 10px 20px
-    ul
-        display: flex
-        padding: 0
-        li
-            list-style-type: none
-            margin: 0px 10px
+    padding: 0
+    line-height: 60px
+    float: right
+    a
+        padding: 10px 10px
+    a:hover ~ .dot
+        -webkit-transition: all 0.2s ease-in-out
+        transition: all 0.2s ease-in-out
+        opacity: 1
+    a:nth-child(1):hover ~ .dot
+        -webkit-transform: translateX(30px) translateY(-15px)
+        transform: translateX(30px) translateY(-15px)
+    a:nth-child(2):hover ~ .dot
+        -webkit-transform: translateX(100px) translateY(-10px)
+        transform: translateX(100px) translateY(-15px)
+    a:nth-child(3):hover ~ .dot
+        -webkit-transform: translateX(185px) translateY(-15px)
+        transform: translateX(185px) translateY(-15px)
+    a:nth-child(4):hover ~ .dot
+        -webkit-transform: translateX(275px) translateY(-15px)
+        transform: translateX(275px) translateY(-15px)
+    .dot
+        width: 5px
+        height: 5px
+        background: white
+        border-radius: 50%
+        opacity: 0
+        -webkit-transform: translateX(0px) translateY(-15px)
+        transform: translateX(0px) translateY(-15px)
+        -webkit-transition: all 0.2s ease-in-out
+        transition: all 0.2s ease-in-out
+  

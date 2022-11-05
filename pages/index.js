@@ -2,6 +2,7 @@
 import styles from "../styles/Index.module.sass";
 //Components
 import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 export default function Home() {
   return (
@@ -13,7 +14,7 @@ export default function Home() {
           <p>Ale ne dnes...</p>
         </div>
       </main>
-      <footer>Copyright&copy;2022</footer>
+      <Footer/>
     </>
   );
 }
