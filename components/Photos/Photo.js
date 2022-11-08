@@ -1,4 +1,4 @@
-import styles from "../../styles/Gallery/Photo.module.sass";
+import styles from "./styles/Photo.module.sass";
 
 export default function Photo({ url, id, caption }) {
   return (

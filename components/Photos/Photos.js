@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import Photo from "./Photo.js";
-import DataFetchProcces from "./DataFetchProcces.js";
-import styles from "../../styles/Gallery/Photos.module.sass";
+import DataFetchProcces from "../DataFetchProcess/DataFetchProcess.js";
+import styles from "./styles/Photos.module.sass";
 
 export default function Photos() {
   const [photos, setPhotos] = useState();

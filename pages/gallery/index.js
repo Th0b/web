@@ -1,7 +1,7 @@
 //Components
-import Header from "../../components/Header";
-import Footer from "../../components/Footer";
-import Photos from "../../components/Gallery/Photos"
+import Header from "components/Header/Header";
+import Footer from "components/Footer/Footer";
+import Photos from "components/Photos/Photos";
 
 export default function Gallery() {
   return (
@@ -11,7 +11,7 @@ export default function Gallery() {
         <h1>Galerie</h1>
         <Photos />
       </main>
-      <Footer/>
+      <Footer />
     </>
   );
 }

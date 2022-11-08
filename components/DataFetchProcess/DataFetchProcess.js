@@ -1,4 +1,4 @@
-import styles from "../../styles/Gallery/DataFetchProcces.module.sass"
+import styles from "./styles/DataFetchProcess.module.sass"
 
 export default function DataFetchProcces({ error, loading }) {
   if (error) {

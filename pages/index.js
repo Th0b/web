@@ -1,8 +1,8 @@
 //Styles
-import styles from "../styles/Index.module.sass";
+import styles from "styles/Index.module.sass";
 //Components
-import Header from "../components/Header";
-import Footer from "../components/Footer";
+import Header from "components/Header/Header";
+import Footer from "components/Footer/Footer";
 
 export default function Home() {
   return (
@@ -14,7 +14,7 @@ export default function Home() {
           <p>Ale ne dnes...</p>
         </div>
       </main>
-      <Footer/>
+      <Footer />
     </>
   );
 }
