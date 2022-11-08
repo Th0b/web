@@ -1,4 +1,5 @@
 //Components
+import Link from "next/Link";
 import Header from "components/Header/Header";
 import Footer from "components/Footer/Footer";
 
@@ -8,8 +9,8 @@ export default function Home() {
       <Header />
       <main>
         <div>
-          <h1>Vítejte na mém webu</h1>
-          <p>Ale ne dnes...</p>
+          <h1>Něco se nepovedlo</h1>
+          <p>Zkus se vrátit na domovskou stránku <Link href="/">tady</Link></p>
         </div>
       </main>
       <Footer />

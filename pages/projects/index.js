@@ -1,16 +1,15 @@
 //Components
 import Header from "components/Header/Header";
 import Footer from "components/Footer/Footer";
+import Repositories from "components/Repositories/Repositories";
 
-export default function Home() {
+export default function Projects() {
   return (
     <>
       <Header />
       <main>
-        <div>
-          <h1>Vítejte na mém webu</h1>
-          <p>Ale ne dnes...</p>
-        </div>
+        <h1>Projekty</h1>
+        <Repositories />
       </main>
       <Footer />
     </>
