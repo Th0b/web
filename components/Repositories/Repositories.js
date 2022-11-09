@@ -12,7 +12,6 @@ export default function Repositories() {
 
   useEffect(() => {
     dataFetch(setError, setLoading, setRepositories, url);
-    console.log(repositories);
   }, []);
 
   return (
@@ -23,7 +22,7 @@ export default function Repositories() {
           {repositories &&
             repositories.map((repository) => (
               <>
-                <Repository name={repository.name} url={repository.html_url} description={repository.description}/>
+                <Repository name={repository.name} url={repository.html_url} description={repository.description} lastUpdate={repository.pushed_at}/>
               </>
             ))}
         </div>
