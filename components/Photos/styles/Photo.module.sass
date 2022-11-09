@@ -4,13 +4,14 @@
     margin: 5px
     position: relative
     cursor: pointer
+    img, .photoCaption
+        transition-duration: 0.5s
+        border-radius: 10px
     img
         height: 100%
         position: relative
         width: auto
-        transition-duration: 0.5s
         filter: blur(0px)
-        border-radius: 15px
     .photoCaption
         height: 100%
         width: 100%
@@ -21,15 +22,11 @@
         justify-content: center
         align-items: center
         color: white
-        transition-duration: 0.5s
-        border-radius: 15px
         padding: 10%
         font-size: 12px
-
+        background-color: rgba(0, 0, 0, 0.4)
 .photo:hover
     img
-        border-radius: 5px
         filter: blur(2px)
     .photoCaption
         opacity: 1
-        border-radius: 5px
