@@ -1,9 +1,14 @@
+@import "styles/variables"
+
 .photo
     height: 250px
     width: auto
     margin: 5px
+    padding: 10px
+    border-radius: 10px
     position: relative
     cursor: pointer
+    background-color: $primaryColor
     img, .photoCaption
         transition-duration: 0.5s
         border-radius: 10px
@@ -13,16 +18,16 @@
         width: auto
         filter: blur(0px)
     .photoCaption
-        height: 100%
-        width: 100%
+        height: calc(100% - 20px)
+        width: calc(100% - 20px)
         position: absolute
-        top: 0
+        top: 10px
         opacity: 0
         display: flex
         justify-content: center
         align-items: center
         color: white
-        padding: 10%
+        padding: 30px
         font-size: 12px
         background-color: rgba(0, 0, 0, 0.4)
 .photo:hover
