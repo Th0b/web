@@ -8,8 +8,7 @@ export default function Photos() {
   const [photos, setPhotos] = useState();
   const [error, setError] = useState(false);
   const [loading, setLoading] = useState(true);
-  const url =
-    "https://graph.instagram.com/me/media?fields=id,media_url,caption&access_token=IGQVJWMklCQ09reFF6RVlHb1lDZAHpsNloyalJadUl4N1MwLU9scUVkanNOLTBVRmlpVkVBaWhJcUhZAZAV9KSFBpY2ptQ1hpQTQ2OE5TYkd0VnA4WDRqaHNuSVdvS2FZAOXFhSmZAOeTh3d0IzTC1Gd1ZANVwZDZD";
+  const url = process.env.NEXT_PUBLIC_INSTAGRAM_API;
 
   useEffect(() => {
     dataFetch(setError, setLoading, setPhotos, url, "data");

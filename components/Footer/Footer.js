@@ -5,9 +5,9 @@ export default function Footer() {
   const facebookIcon = "/SocialSites/facebook.png";
   const instagramIcon = "/SocialSites/instagram.png";
   const githubIcon = "/SocialSites/github.png";
-  const facebookUrl = "https://www.facebook.com/tobiasnavrat/";
-  const instagramUrl = "https://www.instagram.com/umzuzuwetoba/";
-  const githubUrl = "https://github.com/Th0b";
+  const facebookUrl = process.env.NEXT_PUBLIC_FACEBOOK_PROFILE;
+  const instagramUrl = process.env.NEXT_PUBLIC_INSTAGRAM_PROFILE;
+  const githubUrl = process.env.NEXT_PUBLIC_GITHUB_PROFILE;
   return (
     <footer className={styles.footer}>
       <div>

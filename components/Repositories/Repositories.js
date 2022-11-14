@@ -8,7 +8,7 @@ export default function Repositories() {
   const [repositories, setRepositories] = useState();
   const [error, setError] = useState(false);
   const [loading, setLoading] = useState(true);
-  const url = "https://api.github.com/users/th0b/repos";
+  const url = process.env.NEXT_PUBLIC_GITHUB_API;
 
   useEffect(() => {
     dataFetch(setError, setLoading, setRepositories, url);
@@ -22,7 +22,12 @@ export default function Repositories() {
           {repositories &&
             repositories.map((repository) => (
               <>
-                <Repository name={repository.name} url={repository.html_url} description={repository.description} lastUpdate={repository.pushed_at}/>
+                <Repository
+                  name={repository.name}
+                  url={repository.html_url}
+                  description={repository.description}
+                  lastUpdate={repository.pushed_at}
+                />
               </>
             ))}
         </div>
