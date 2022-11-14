@@ -16,13 +16,13 @@ export default function Footer() {
       </div>
       <div>
         <a href={facebookUrl} target="_blank" rel="noreferrer noopener">
-          <img className={styles.icon} src={facebookIcon}></img>
+          <img className={styles.icon} src={facebookIcon} alt="Facebook Logo"></img>
         </a>
         <a href={instagramUrl} target="_blank" rel="noreferrer noopener">
-          <img className={styles.icon} src={instagramIcon}></img>
+          <img className={styles.icon} src={instagramIcon} alt="Instragram Logo"></img>
         </a>
         <a href={githubUrl} target="_blank" rel="noreferrer noopener">
-          <img className={styles.icon} src={githubIcon}></img>
+          <img className={styles.icon} src={githubIcon} alt="Github Logo"></img>
         </a>
       </div>
     </footer>
