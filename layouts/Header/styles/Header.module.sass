@@ -1,0 +1,64 @@
+@import "styles/variables"
+
+.header
+    height: 85px
+    width: 100vw
+    line-height: 85px
+    color: $fontSecondaryColor
+    background-color: $tertiaryColor
+    position: fixed
+    top: 0
+    z-index: 100
+    clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 0% 100%)
+
+.logo
+    height: 60px
+    width: 60px
+    margin: 10px 20px
+    position: relative
+    float: left
+    cursor: pointer
+
+.name
+    float: left
+    cursor: pointer
+    font-size: 30px
+    font-weight: bold
+    padding: 0
+
+.pageNavigation
+    height: 65px
+    margin: 10px 20px
+    padding: 0
+    line-height: 50px //random number
+    float: right
+    a
+        padding: 10px 10px
+    a:hover
+        text-decoration: none
+    a:hover ~ .dot
+        -webkit-transition: all 0.2s ease-in-out
+        transition: all 0.2s ease-in-out
+        opacity: 1
+    a:nth-child(1):hover ~ .dot
+        -webkit-transform: translateX(30px) translateY(-15px)
+        transform: translateX(30px) translateY(-15px)
+    a:nth-child(2):hover ~ .dot
+        -webkit-transform: translateX(76px) translateY(-15px)
+        transform: translateX(76px) translateY(-15px)
+    a:nth-child(3):hover ~ .dot
+        -webkit-transform: translateX(155px) translateY(-15px)
+        transform: translateX(155px) translateY(-15px)
+    a:nth-child(4):hover ~ .dot
+        -webkit-transform: translateX(250px) translateY(-15px)
+        transform: translateX(250px) translateY(-15px)
+    .dot
+        width: 5px
+        height: 5px
+        background: white
+        border-radius: 50%
+        opacity: 0
+        -webkit-transform: translateX(0px) translateY(-15px)
+        transform: translateX(0px) translateY(-15px)
+        -webkit-transition: all 0.2s ease-in-out
+        transition: all 0.2s ease-in-out

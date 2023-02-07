@@ -1,0 +1,10 @@
+@import "styles/variables"
+
+.blockWrapper
+    padding: 30px 5%
+    &:nth-of-type(even)
+        background-color: $secondaryColor
+        clip-path: polygon(50% 0%, 100% 20px, 100% 100%, 50% calc(100% - 15px), 0% calc(100% - 10px), 0% 10px) 
+
+.blockName
+    font-size: 10px

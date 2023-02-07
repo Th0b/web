@@ -1,17 +1,18 @@
 //Components
 import Link from "next/link";
-import Header from "components/Header/Header";
-import Footer from "components/Footer/Footer";
+import Header from "layouts/Header/Header";
+import Footer from "layouts/Footer/Footer";
+import Block from "components/Block/Block";
 
 export default function Home() {
   return (
     <>
       <Header />
       <main>
-        <div>
-          <h1>Něco se nepovedlo</h1>
+        <Block>
+          <h1>Stránka nenalezena</h1>
           <p>Zkus se vrátit na domovskou stránku <Link href="/">tady</Link></p>
-        </div>
+        </Block>
       </main>
       <Footer />
     </>

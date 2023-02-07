@@ -13,8 +13,11 @@
     "next": "12.2.5",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-github-calendar": "^3.3.4",
+    "react-hook-form": "^7.43.1",
     "reaptcha": "^1.12.1",
-    "sass": "^1.55.0"
+    "sass": "^1.55.0",
+    "validator": "^13.7.0"
   },
   "devDependencies": {
     "@babel/core": "^7.19.6",
