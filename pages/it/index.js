@@ -5,9 +5,10 @@ import Repositories from "layouts/Repositories/Repositories";
 import GithubCalendar from "layouts/GithubCalendar/GithubCalendar";
 //Components
 import Block from "components/Block/Block";
+//Constants
+import * as Constants from "constants";
 
 export default function Projects() {
-  const githubUrl = process.env.NEXT_PUBLIC_GITHUB_PROFILE;
   return (
     <>
       <Header />
@@ -16,7 +17,7 @@ export default function Projects() {
           <h1>IT</h1>
           <p>
             Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
+            industry. Lorem Ipsum has been the industrys standard dummy text
             ever since the 1500s, when an unknown printer took a galley of type
             and scrambled it to make a type specimen book. It has survived not
             only five centuries, but also the leap into electronic typesetting,
@@ -34,8 +35,12 @@ export default function Projects() {
           <h2>Projekty</h2>
           <p>
             Zde se nachází mé open source projekty, uveřejněné na mém profilu{" "}
-            <a href={githubUrl} target="_blank" rel="noreferrer noopener">
-              @Th0be
+            <a
+              href={Constants.GITHUB_URL}
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              @{Constants.GITHUB_USERNAME}
             </a>{" "}
             na platformě GitHub. Ocením každou zpětnou vazbu a pokud máš
             jakkýkoliv nápad na zlepšení, uvítám ho. Pro více informací o daném

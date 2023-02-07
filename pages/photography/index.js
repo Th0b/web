@@ -4,9 +4,10 @@ import Footer from "layouts/Footer/Footer";
 import Photos from "layouts/Photos/Photos";
 //Components
 import Block from "components/Block/Block";
+//Constants
+import * as Constants from "constants";
 
 export default function Gallery() {
-  const instagramUrl = "https://www.instagram.com/umzuzuwetoba/";
   return (
     <>
       <Header />
@@ -15,7 +16,7 @@ export default function Gallery() {
           <h1>Fotografování</h1>
           <p>
             Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
+            industry. Lorem Ipsum has been the industrys standard dummy text
             ever since the 1500s, when an unknown printer took a galley of type
             and scrambled it to make a type specimen book. It has survived not
             only five centuries, but also the leap into electronic typesetting,
@@ -29,8 +30,8 @@ export default function Gallery() {
           <h2>Galerie</h2>
           <p>
             Veškeré fotografie, najdete také na mém instragramu{" "}
-            <a href={instagramUrl} target="_blank" rel="noreferrer noopener">
-              @umzuzuwetoba
+            <a href={Constants.INSTAGRAM_URL} target="_blank" rel="noreferrer noopener">
+              @{Constants.INSTAGRAM_USERNAME}
             </a>
             , který slouží jako má primární síť pro sdílení nově vyfocených
             fotografií.

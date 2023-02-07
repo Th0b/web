@@ -1,3 +1,5 @@
+//Constants
+import * as Constants from "constants";
 //Styles
 import styles from "./styles/Footer.module.sass";
 
@@ -6,9 +8,6 @@ export default function Footer() {
   const facebookIcon = "/SocialSites/facebook.png";
   const instagramIcon = "/SocialSites/instagram.png";
   const githubIcon = "/SocialSites/github.png";
-  const facebookUrl = process.env.NEXT_PUBLIC_FACEBOOK_PROFILE;
-  const instagramUrl = process.env.NEXT_PUBLIC_INSTAGRAM_PROFILE;
-  const githubUrl = process.env.NEXT_PUBLIC_GITHUB_PROFILE;
   return (
     <footer className={styles.footer}>
       <div>
@@ -16,21 +15,21 @@ export default function Footer() {
         Návrat &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;
       </div>
       <div>
-        <a href={facebookUrl} target="_blank" rel="noreferrer noopener">
+        <a href={Constants.FACEBOOK_URL} target="_blank" rel="noreferrer noopener">
           <img
             className={styles.icon}
             src={facebookIcon}
             alt="Facebook Logo"
           ></img>
         </a>
-        <a href={instagramUrl} target="_blank" rel="noreferrer noopener">
+        <a href={Constants.INSTAGRAM_URL} target="_blank" rel="noreferrer noopener">
           <img
             className={styles.icon}
             src={instagramIcon}
             alt="Instragram Logo"
           ></img>
         </a>
-        <a href={githubUrl} target="_blank" rel="noreferrer noopener">
+        <a href={Constants.GITHUB_URL} target="_blank" rel="noreferrer noopener">
           <img className={styles.icon} src={githubIcon} alt="Github Logo"></img>
         </a>
       </div>

@@ -1,13 +1,13 @@
 //Hooks
 import { useState } from "react";
 import { useForm } from "react-hook-form";
-import validator from "validator";
 //Components
 import Reaptcha from "reaptcha";
 //Styles
 import styles from "./styles/ContactForm.module.sass";
 
 export default function ContactForm() {
+  const { register, handleSubmit, watch, formState: { errors } } = useForm();
   const [form, setForm] = useState({
     firstName: "",
     lastName: "",
