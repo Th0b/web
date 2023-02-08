@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { dataFetch } from "utils/dataFetch";
 //Components
 import Repository from "./components/Repository";
-import DataFetchLoading from "components/DataFetchLoading/DataFetchLoading.js";
+import FetchProcess from "components/FetchProcess/FetchProcess.js";
 //Constants
 import * as Constants from "constants"
 //Styles
@@ -21,7 +21,7 @@ export default function Repositories() {
 
   return (
     <>
-      <DataFetchLoading error={error} loading={loading} />
+      <FetchProcess error={error} loading={loading} />
       {!error && !loading && (
         <div className={styles.repositories}>
           {repositories &&
