@@ -15,7 +15,7 @@
     "react-dom": "18.2.0",
     "react-github-calendar": "^3.3.4",
     "react-hook-form": "^7.43.1",
-    "reaptcha": "^1.12.1",
+    "react-hook-recaptcha": "^2.0.1",
     "sass": "^1.55.0"
   },
   "devDependencies": {

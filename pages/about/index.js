@@ -1,3 +1,5 @@
+//Hooks
+import { useEffect, useState } from "react";
 //Layouts
 import Header from "layouts/Header/Header";
 import Footer from "layouts/Footer/Footer";
@@ -6,6 +8,13 @@ import ContactForm from "layouts/ContactForm/ContactForm";
 import Block from "components/Block/Block";
 
 export default function About() {
+  //Because recaptcha loading
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
   return (
     <>
       <Header />
@@ -26,7 +35,7 @@ export default function About() {
         </Block>
         <Block>
           <h2>Kontaktní formulář</h2>
-          <ContactForm />
+          {mounted && <ContactForm />}
         </Block>
       </main>
       <Footer />

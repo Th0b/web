@@ -1,15 +1,16 @@
 //Hooks
-import { useState } from "react";
-import { useForm, Controller } from "react-hook-form";
+import { useForm } from "react-hook-form";
 //Components
-import Reaptcha from "reaptcha";
+import { useRecaptcha } from "react-hook-recaptcha";
 //Styles
 import styles from "./styles/ContactForm.module.sass";
 
 export default function ContactForm() {
+  //Forms settings
   const {
     register,
     handleSubmit,
+    setValue,
     formState: { errors },
   } = useForm({
     defaultValues: {
@@ -18,10 +19,10 @@ export default function ContactForm() {
       email: "",
       subject: "",
       message: "",
+      recaptcha: false,
     },
     mode: "all",
   });
-
   const formOptions = {
     firstName: {
       required: "Jméno je potřeba vyplnit",
@@ -50,7 +51,23 @@ export default function ContactForm() {
     message: {
       required: "Zprávu je potřeba vyplnit",
     },
+    recaptcha: {
+      required: "Je potřeba potvrdit, že jsi člověk",
+    },
   };
+
+  //Recaptcha settings
+  const sitekey = "6LeptfwiAAAAAIlsIucO6DVV5-6qne4saQjlv2Hx";
+  const containerId = "recaptcha";
+  const successCallback = (/*response*/) => setValue("recaptcha", true, { shouldValidate: true });
+  const expiredCallback = () => setValue("recaptcha", false, { shouldValidate: true });
+  useRecaptcha({
+    containerId,
+    successCallback,
+    expiredCallback,
+    sitekey,
+    size: "normal",
+  });
 
   const onSubmit = (data) => console.log(data);
 
@@ -66,8 +83,8 @@ export default function ContactForm() {
           {...register("firstName", formOptions.firstName)}
         />
         <div className={styles.cut}></div>
-        <div  className={styles.errorCut}>{errors.firstName?.message}</div>
-        <label for="firstName" className={styles.placeholder}>
+        <div className={styles.errorCut}>{errors.firstName?.message}</div>
+        <label htmlFor="firstName" className={styles.placeholder}>
           Jméno
         </label>
       </div>
@@ -81,8 +98,8 @@ export default function ContactForm() {
           {...register("lastName", formOptions.lastName)}
         />
         <div className={styles.cut}></div>
-        <div  className={styles.errorCut}>{errors.lastName?.message}</div>
-        <label for="lastName" className={styles.placeholder}>
+        <div className={styles.errorCut}>{errors.lastName?.message}</div>
+        <label htmlFor="lastName" className={styles.placeholder}>
           Příjmení
         </label>
       </div>
@@ -96,8 +113,8 @@ export default function ContactForm() {
           {...register("email", formOptions.email)}
         />
         <div className={styles.cut}></div>
-        <div  className={styles.errorCut}>{errors.email?.message}</div>
-        <label for="email" className={styles.placeholder}>
+        <div className={styles.errorCut}>{errors.email?.message}</div>
+        <label htmlFor="email" className={styles.placeholder}>
           Email
         </label>
       </div>
@@ -111,8 +128,8 @@ export default function ContactForm() {
           {...register("subject", formOptions.subject)}
         />
         <div className={styles.cut}></div>
-        <div  className={styles.errorCut}>{errors.subject?.message}</div>
-        <label for="subject" className={styles.placeholder}>
+        <div className={styles.errorCut}>{errors.subject?.message}</div>
+        <label htmlFor="subject" className={styles.placeholder}>
           Předmět
         </label>
       </div>
@@ -125,19 +142,22 @@ export default function ContactForm() {
           {...register("message", formOptions.message)}
         />
         <div className={styles.cut}></div>
-        <div  className={styles.errorCut}>{errors.message?.message}</div>
-        <label for="message" className={styles.placeholder}>
+        <div className={styles.errorCut}>{errors.message?.message}</div>
+        <label htmlFor="message" className={styles.placeholder}>
           Zpráva
         </label>
       </div>
-      <Reaptcha
-        className={styles.reaptcha}
-        sitekey="6LeptfwiAAAAAIlsIucO6DVV5-6qne4saQjlv2Hx"
-        onVerify={() =>
-          setFormValidation({ ...formValidation, reaptcha: true })
-        }
-      />
-      <input className={styles.submit} type="submit" value="Odeslat" />
+      <div className={styles.inputContainer}>
+        <div className={styles.errorCut}>{errors.recaptcha?.message}</div>
+        <div
+          id={containerId}
+          className="g-recaptcha"
+          {...register("recaptcha", formOptions.recaptcha)}
+        />
+      </div>
+      <button className={styles.submit} type="submit">
+        Odeslat
+      </button>
     </form>
   );
 }
