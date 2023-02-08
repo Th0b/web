@@ -1,15 +1,17 @@
 @import "styles/variables"
 
 .form
-    width: 100%
+    width: 700px
     background-color: $primaryColor
     border-left: 20px solid $tertiaryColor
-    padding: 20px
+    padding: 30px 30px
     margin: 15px 0
     border-radius: 15px
+    clip-path: polygon(65% 0%, 100% 20px, 100% 100%, 35% calc(100% - 15px), 0% calc(100% - 10px), 0% 10px)
     .inputContainer
         height: auto
         width: 100%
+        margin: 13px 0
         position: relative
         .textarea
             resize: none
@@ -18,8 +20,9 @@
         .input
             height: 40px
             line-height: 40px
-            padding: 0 20px
+            padding: 25px 20px
         .input, .textarea
+            clip-path: polygon(50% 0%, 100% 4px, 100% 100%, 50% calc(100% - 5px), 0% calc(100% - 4px), 0% 5px)
             font-family: inherit
             width: 100%
             font-size: 14px
@@ -29,45 +32,75 @@
             border-radius: 12px
             border: none
             outline: none
-            transition-duration: 0.2s
-        .cut
+        .cut, .errorCut
             height: 20px
-            width: 60px
             position: absolute
-            left: 20px
-            top: -20px
             background-color: $primaryColor
             border-radius: 10px
+        .cut
+            width: 60px
+            left: 20px
+            top: -16px
             transform: translateY(0)
-            transition: transform 200ms
+            transition: 200ms
+        .errorCut
+            width: auto
+            left: 20px
+            top: -8px
+            font-size: 10.5px
+            line-height: 20px
+            padding: 0 10px
+            color: $fontErrorColor
+            opacity: 1
+            transition: 200ms
         .placeholder
             font-family: inherit
             position: absolute
             font-size: 14px
             top: 0px
             left: 20px
-            line-height: 40px
+            line-height: 49px //Random number
             color: black
             pointer-events: none
             transform-origin: 0 50%
             transition: transform 200ms, color 200ms
+        //On focus on input for cut
         .input:focus ~ .cut, .textarea:focus ~ .cut,
         .input:not(:placeholder-shown) ~ .cut, .textarea:not(:placeholder-shown) ~ .cut
             transform: translateY(8px)
+        //On focus or blur on input for placeholder
         .input:focus ~ .placeholder, .textarea:focus ~ .placeholder,
         .input:not(:placeholder-shown) ~ .placeholder, .textarea:not(:placeholder-shown) ~ .placeholder
-            transform: translateY(-25px) translateX(10px) scale(0.75)
+            transform: translateY(-23px) translateX(10px) scale(0.75)
+        //On focus on input for placeholder
+        .input:focus ~ .placeholder, .textarea:focus ~ .placeholder
+            color: $fontPrimaryColor
+        //On blur on input for placeholder
         .input:not(:placeholder-shown) ~ .placeholder, .textarea:not(:placeholder-shown) ~ .placeholder
             color: $tertiaryColor
-        .input:focus ~ .placeholder, .textarea:focus ~ .placeholder
-            color: black
-    .submit
-        cursor: pointer
+        //On focus on input for errorCut
+        .input:focus ~ .errorCut, .textarea:focus ~ .errorCut,
+        .input:not(:placeholder-shown) ~ .errorCut, .textarea:not(:placeholder-shown) ~ .errorCut
+            left: 90px
+        //On empty error
+        .errorCut:empty
+            opacity: 0
+    .submit, .sumbit:active
+        height: auto
+        width: 100%
+        padding: 15px 10px
+        clip-path: polygon(50% 0%, 100% 4px, 100% 100%, 50% calc(100% - 5px), 0% calc(100% - 4px), 0% 5px)
         font-size: 18px
+        font-family: inherit
         font-weight: bold
+        color: $fontSecondaryColor
+        border-radius: 15px
+        border: none
+        outline: none
+        background-color: $tertiaryColor 
+        cursor: pointer
+    .submit:hover
+        background-color: $secondaryColor
+        color: $tertiaryColor
     .reaptcha
-        margin: -10px 0 10px 0
-    //input[data-valid=true], textarea[data-valid=true]
-    //    outline: 3px solid green
-    //input[data-valid=false], textarea[data-valid=false]
-    //    outline: 3px solid red
+        margin: 0 0 15px 0
