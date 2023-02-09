@@ -5,12 +5,14 @@ import Repositories from "layouts/Repositories/Repositories";
 import GithubCalendar from "layouts/GithubCalendar/GithubCalendar";
 //Components
 import Block from "components/Block/Block";
+import PageHead from "components/PageHead/PageHead";
 //Constants
 import * as Constants from "constants";
 
 export default function Projects() {
   return (
     <>
+      <PageHead title="IT" />
       <Header />
       <main>
         <Block>

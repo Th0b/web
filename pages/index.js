@@ -6,12 +6,14 @@ import Photos from "layouts/Photos/Photos";
 import Skills from "layouts/Skills/Skills";
 //Components
 import Block from "components/Block/Block";
+import PageHead from "components/PageHead/PageHead";
 //Styles
 import styles from "styles/index.module.sass";
 
 export default function Home() {
   return (
     <>
+      <PageHead title="Tobiáš Návrat" />
       <Header />
       <main>
         <Block>
@@ -42,7 +44,7 @@ export default function Home() {
             Mimo ajťačinu také rád fotím, jedná se spíš o koníček než nějaké
             profesionální portofolio, ale dělám to rád.
           </p>
-          <Photos quantity="3"/>
+          <Photos quantity="3" />
         </Block>
       </main>
       <Footer />

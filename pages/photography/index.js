@@ -4,12 +4,14 @@ import Footer from "layouts/Footer/Footer";
 import Photos from "layouts/Photos/Photos";
 //Components
 import Block from "components/Block/Block";
+import PageHead from "components/PageHead/PageHead";
 //Constants
 import * as Constants from "constants";
 
 export default function Gallery() {
   return (
     <>
+      <PageHead title="Fotografování" />
       <Header />
       <main>
         <Block>
@@ -30,7 +32,11 @@ export default function Gallery() {
           <h2>Galerie</h2>
           <p>
             Veškeré fotografie, najdete také na mém instragramu{" "}
-            <a href={Constants.INSTAGRAM_URL} target="_blank" rel="noreferrer noopener">
+            <a
+              href={Constants.INSTAGRAM_URL}
+              target="_blank"
+              rel="noreferrer noopener"
+            >
               @{Constants.INSTAGRAM_USERNAME}
             </a>
             , který slouží jako má primární síť pro sdílení nově vyfocených

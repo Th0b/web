@@ -6,6 +6,7 @@ import Footer from "layouts/Footer/Footer";
 import ContactForm from "layouts/ContactForm/ContactForm";
 //Components
 import Block from "components/Block/Block";
+import PageHead from "components/PageHead/PageHead";
 
 export default function About() {
   //Because recaptcha loading
@@ -17,6 +18,7 @@ export default function About() {
 
   return (
     <>
+      <PageHead title="O mně" />
       <Header />
       <main>
         <Block>
