@@ -11,18 +11,17 @@ import styles from "./styles/Repositories.module.sass";
 
 export default function Repositories() {
   const [repositories, setRepositories] = useState();
-  const [error, setError] = useState(false);
-  const [loading, setLoading] = useState(true);
+  const [status, setStatus] = useState("");
   const url = Constants.GITHUB_API;
 
   useEffect(() => {
-    dataFetch(setError, setLoading, setRepositories, url);
+    dataFetch(setStatus, setRepositories, url);
   }, []);
 
   return (
     <>
-      <FetchProcess error={error} loading={loading} />
-      {!error && !loading && (
+      <FetchProcess status={status} />
+      {status==="success" && (
         <div className={styles.repositories}>
           {repositories &&
             repositories.map((repository) => (

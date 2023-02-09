@@ -1,11 +1,6 @@
-export async function dataFetch(
-  setError,
-  setLoading,
-  setResult,
-  url,
-  location
-) {
+export async function dataFetch(setStatus, setResult, url, location) {
   try {
+    setStatus("loading");
     const response = await fetch(url);
     const result = await response.json();
     if (location !== undefined) {
@@ -16,9 +11,9 @@ export async function dataFetch(
       console.log("Fetched: ", result);
     }
   } catch (error) {
-    setError(true);
+    setStatus("error");
     console.log(error);
   } finally {
-    setLoading(false);
+    setStatus("success");
   }
 }

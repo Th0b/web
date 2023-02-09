@@ -1,11 +1,20 @@
 //Hooks
+import { useState } from "react";
 import { useForm } from "react-hook-form";
-//Components
 import { useRecaptcha } from "react-hook-recaptcha";
+//Utils
+import { dataPost } from "utils/dataPost";
+//Components
+import Loading from "components/Loading/Loading";
+//Constants
+import * as Constants from "constants";
 //Styles
 import styles from "./styles/ContactForm.module.sass";
 
 export default function ContactForm() {
+  const [status, setStatus] = useState("");
+  const url = Constants.CONTACT_FORM_API;
+
   //Forms settings
   const {
     register,
@@ -59,8 +68,10 @@ export default function ContactForm() {
   //Recaptcha settings
   const sitekey = "6LeptfwiAAAAAIlsIucO6DVV5-6qne4saQjlv2Hx";
   const containerId = "recaptcha";
-  const successCallback = (/*response*/) => setValue("recaptcha", true, { shouldValidate: true });
-  const expiredCallback = () => setValue("recaptcha", false, { shouldValidate: true });
+  const successCallback = (/*response*/) =>
+    setValue("recaptcha", true, { shouldValidate: true });
+  const expiredCallback = () =>
+    setValue("recaptcha", false, { shouldValidate: true });
   useRecaptcha({
     containerId,
     successCallback,
@@ -69,7 +80,11 @@ export default function ContactForm() {
     size: "normal",
   });
 
-  const onSubmit = (data) => console.log(data);
+  const onSubmit = (data) => {
+    dataPost(setStatus, url, data);
+    console.log(data);
+    console.log(result);
+  };
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
@@ -155,8 +170,31 @@ export default function ContactForm() {
           {...register("recaptcha", formOptions.recaptcha)}
         />
       </div>
-      <button className={styles.submit} type="submit">
-        Odeslat
+      <button
+        data-status={status}
+        disabled={status === "loading" || status === "success"}
+        className={styles.submit}
+        type="submit"
+      >
+        {status === "" && <>Odeslat</>}
+        {status === "loading" && <Loading />}
+        {status === "error" && (
+          <>
+            <div className={styles.submitMessageHeader}>Formulář se nepodařilo odeslat</div>
+            <div className={styles.submitMessageText}>
+              Zkontroluj své internetové připojení a zkus to znovu, nebo mne kontaktuj jinou
+              cestou.
+            </div>
+          </>
+        )}
+        {status === "success" && (
+          <>
+            <div className={styles.submitMessageHeader}>Formulář byl úspěšně odeslán</div>
+            <div className={styles.submitMessageText}>
+              Ozvu se ti během následujících dní.
+            </div>
+          </>
+        )}
       </button>
     </form>
   );

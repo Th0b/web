@@ -12,18 +12,17 @@ import styles from "./styles/Photos.module.sass";
 
 export default function Photos({ quantity }) {
   const [photos, setPhotos] = useState();
-  const [error, setError] = useState(false);
-  const [loading, setLoading] = useState(true);
+  const [status, setStatus] = useState("");
   const url = Constants.INSTAGRAM_API + process.env.NEXT_PUBLIC_INSTAGRAM_TOKEN;
 
   useEffect(() => {
-    dataFetch(setError, setLoading, setPhotos, url, "data");
+    dataFetch(setStatus, setPhotos, url, "data");
   }, []);
 
   return (
     <>
-      <FetchProcess error={error} loading={loading} />
-      {!error && !loading && photos !== undefined && (
+      <FetchProcess status={status} />
+      {status==="success" && photos !== undefined && (
         <div className={styles.photos}>
           {photos.slice(0, quantity).map((photo) => (
             <>

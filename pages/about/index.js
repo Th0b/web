@@ -34,7 +34,11 @@ export default function About() {
           </p>
         </Block>
         <Block>
-          <h2>Kontaktní formulář</h2>
+          <h2>Životopis</h2>
+        </Block>
+        <Block>
+          <h2>Zanechej mi zprávu</h2>
+          <p>A já se ti ozvu...</p>
           {mounted && <ContactForm />}
         </Block>
       </main>
