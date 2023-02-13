@@ -11,25 +11,44 @@ export default function Footer() {
   return (
     <footer className={styles.footer}>
       <div>
-        &copy; 2022-{yearNow} &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp; Tobiáš
-        Návrat &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;
+        <a
+          href={Constants.GITHUB_ISSUE}
+          target="_blank"
+          rel="noreferrer noopener"
+        >
+          Nahlásit chybu
+        </a>
+        &nbsp;&nbsp;&nbsp; | &copy; 2022-{yearNow} &nbsp;&nbsp;&nbsp; |
+        &nbsp;&nbsp;&nbsp; Tobiáš Návrat &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;
       </div>
       <div>
-        <a href={Constants.FACEBOOK_URL} target="_blank" rel="noreferrer noopener">
+        <a
+          href={Constants.FACEBOOK_URL}
+          target="_blank"
+          rel="noreferrer noopener"
+        >
           <img
             className={styles.icon}
             src={facebookIcon}
             alt="Facebook Logo"
           ></img>
         </a>
-        <a href={Constants.INSTAGRAM_URL} target="_blank" rel="noreferrer noopener">
+        <a
+          href={Constants.INSTAGRAM_URL}
+          target="_blank"
+          rel="noreferrer noopener"
+        >
           <img
             className={styles.icon}
             src={instagramIcon}
             alt="Instragram Logo"
           ></img>
         </a>
-        <a href={Constants.GITHUB_URL} target="_blank" rel="noreferrer noopener">
+        <a
+          href={Constants.GITHUB_URL}
+          target="_blank"
+          rel="noreferrer noopener"
+        >
           <img className={styles.icon} src={githubIcon} alt="Github Logo"></img>
         </a>
       </div>
