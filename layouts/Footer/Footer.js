@@ -18,9 +18,8 @@ export default function Footer() {
         >
           Nahlásit chybu
         </a>
-        &nbsp;&nbsp;&nbsp; | &copy; 2022-{yearNow} &nbsp;&nbsp;&nbsp; |
-        &nbsp;&nbsp;&nbsp; Tobiáš Návrat &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;
       </div>
+      |<div>2022-{yearNow}</div>|<div>Tobiáš Návrat</div>|
       <div>
         <a
           href={Constants.FACEBOOK_URL}

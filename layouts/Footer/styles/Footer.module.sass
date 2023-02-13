@@ -1,12 +1,15 @@
 @import "styles/variables"
 
 .footer
-    height: 80px
+    min-height: 80px
     width: 100vw
+    padding: 10px
     position: relative
     display: flex
     justify-content: center
     align-items: center
+    flex-wrap: wrap
+    column-gap: 20px
     bottom: 0
     color: $fontSecondaryColor
     text-align: center
@@ -19,6 +22,7 @@
         line-height: 40px
     .icon
         height: 26px
-        margin: 7px
+        margin: 0 7px
+        vertical-align: middle
     .icon, a
         cursor: pointer
