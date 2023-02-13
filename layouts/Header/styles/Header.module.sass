@@ -1,7 +1,7 @@
 @import "styles/variables"
 
 .header
-    height: 85px
+    min-height: 85px
     width: 100vw
     line-height: 85px
     color: $fontSecondaryColor
@@ -9,7 +9,7 @@
     position: fixed
     top: 0
     z-index: 100
-    clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 0% 100%)
+    clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - 17px), 0% 100%)
     user-select: none
 .logo
     height: 60px
@@ -25,39 +25,76 @@
     font-size: 30px
     font-weight: bold
     padding: 0
-
-.pageNavigation
+.hamburgerContainer
+    position: relative
+    float: right
     height: 65px
     margin: 10px 20px
-    padding: 0
-    line-height: 50px //random number
-    float: right
-    a
-        padding: 10px 10px
-        text-decoration: none
-    a:hover ~ .dot
-        -webkit-transition: all 0.2s ease-in-out
-        transition: all 0.2s ease-in-out
-        opacity: 1
-    a:nth-child(1):hover ~ .dot
-        -webkit-transform: translateX(30px) translateY(-15px)
-        transform: translateX(30px) translateY(-15px)
-    a:nth-child(2):hover ~ .dot
-        -webkit-transform: translateX(76px) translateY(-15px)
-        transform: translateX(76px) translateY(-15px)
-    a:nth-child(3):hover ~ .dot
-        -webkit-transform: translateX(155px) translateY(-15px)
-        transform: translateX(155px) translateY(-15px)
-    a:nth-child(4):hover ~ .dot
-        -webkit-transform: translateX(250px) translateY(-15px)
-        transform: translateX(250px) translateY(-15px)
-    .dot
-        width: 5px
-        height: 5px
-        background: white
-        border-radius: 50%
-        opacity: 0
-        -webkit-transform: translateX(0px) translateY(-15px)
-        transform: translateX(0px) translateY(-15px)
-        -webkit-transition: all 0.2s ease-in-out
-        transition: all 0.2s ease-in-out
+
+.navigation
+    ul
+        margin: 0
+        padding: 0
+        list-style-type: none
+        display: flex
+        a
+            text-decoration: none
+
+@media (max-width: 770px)
+    .navigation[data-visible=true]
+        max-height: 290px //random
+    .navigation
+        max-height: 0
+        transition: max-height 0.5s ease-in-out
+        width: 100vw
+        margin-top: 85px
+        ul
+            flex-wrap: wrap
+            margin-bottom: 30px
+            li
+                height: 50px
+                width: 100%
+                padding-left: 40px
+                line-height: 50px
+                font-size: 18px
+
+@media (min-width: 771px)
+    .navigation
+        height: 65px
+        margin: 10px 50px
+        padding: 0
+        float: right
+        ul
+            flex-wrap: nowrap
+            li
+                height: 50px
+                line-height: 45px
+                a
+                    padding: 0 15px
+            li:hover ~ .dot
+                -webkit-transition: all 0.2s ease-in-out
+                transition: all 0.2s ease-in-out
+                opacity: 1
+            li:nth-child(1):hover ~ .dot
+                -webkit-transform: translateX(36px) translateY(40px)
+                transform: translateX(36px) translateY(40px)
+            li:nth-child(2):hover ~ .dot
+                -webkit-transform: translateX(92px) translateY(40px)
+                transform: translateX(92px) translateY(40px)
+            li:nth-child(3):hover ~ .dot
+                -webkit-transform: translateX(180px) translateY(40px)
+                transform: translateX(180px) translateY(40px)
+            li:nth-child(4):hover ~ .dot
+                -webkit-transform: translateX(285px) translateY(40px)
+                transform: translateX(285px) translateY(40px)
+            .dot
+                width: 5px
+                height: 5px
+                background: white
+                position: absolute
+                border-radius: 50%
+                opacity: 0
+                -webkit-transform: translateX(0px) translateY(40px)
+                transform: translateX(0px) translateY(40px)
+                -webkit-transition: all 0.2s ease-in-out
+                transition: all 0.2s ease-in-out
