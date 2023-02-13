@@ -17,7 +17,7 @@ export default function Home() {
           <div className={styles.errorContainer}>
             <img src="errorCross.svg" alt="Error" className={styles.errorCross} />
             <div className={styles.error}>
-              Zkus se vrátit na <Link href="/">domovskou stránku</Link>.
+              Stránka, kterou hledáš neexistuje. Zkus se vrátit na <Link href="/">domovskou stránku</Link> nebo využij menu v hlavičce.
             </div>
           </div>
         </Block>

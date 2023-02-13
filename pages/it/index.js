@@ -3,6 +3,7 @@ import Header from "layouts/Header/Header";
 import Footer from "layouts/Footer/Footer";
 import Repositories from "layouts/Repositories/Repositories";
 import GithubCalendar from "layouts/GithubCalendar/GithubCalendar";
+import Skills from "layouts/Skills/Skills";
 //Components
 import Block from "components/Block/Block";
 import PageHead from "components/PageHead/PageHead";
@@ -18,25 +19,36 @@ export default function Projects() {
         <Block>
           <h1>IT</h1>
           <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industrys standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book. It has survived not
-            only five centuries, but also the leap into electronic typesetting,
-            remaining essentially unchanged. It was popularised in the 1960s
-            with the release of Letraset sheets containing Lorem Ipsum passages,
-            and more recently with desktop publishing software like Aldus
-            PageMaker including versions of Lorem Ipsum.
+            IT mě fascinovalo již od mala. Na základní škole jsem navštěvoval
+            počítačový kroužek, kde jsem poprvé viděl HTML a vytvořil svůj první
+            web. Když jsem se poté rozhodoval kam na střední, IT pro mě byla
+            relativně jasná volba.
+          </p>
+          <p>
+            Později jsem si musel zvolit zaměření, kterým se budu ubírat a
+            jelikož mě zajímalo fungování internetu, sítí a jejich bezpečnost,
+            rozhodl jsem pro ně.
+          </p>
+          <p>
+            Dnes se nejvíc věnuji vytváření webů a webových aplikací. Pracuji
+            jako junior front-end developer ve firmě Brainsov Solutions, kde
+            vyvíjíme převážně aplikace pro obchodní centra. Také spravuji
+            několik wordpress webů neziskovým organizacím a sám se snažím
+            vyvíjet nejen různé open source webové aplikace.
           </p>
         </Block>
         <Block>
-          <h2>Github aktivita</h2>
+          <h2>Aktivita na Githubu</h2>
           <GithubCalendar />
         </Block>
         <Block>
-          <h2>Projekty</h2>
+          <h2>Dovednosti</h2>
+          <Skills />
+        </Block>
+        <Block>
+          <h2>Open source projekty</h2>
           <p>
-            Zde se nachází mé open source projekty, uveřejněné na mém profilu{" "}
+            Většina mých projektů je open source a je uveřejněna na mém profilu{" "}
             <a
               href={Constants.GITHUB_URL}
               target="_blank"
@@ -44,10 +56,8 @@ export default function Projects() {
             >
               @{Constants.GITHUB_USERNAME}
             </a>{" "}
-            na platformě GitHub. Ocením každou zpětnou vazbu a pokud máš
-            jakkýkoliv nápad na zlepšení, uvítám ho. Pro více informací o daném
-            projektu stačí projekt rozkliknout a v angličtině je možné si pak
-            prohlédnout jeho postupný vývoj.
+            na platformě GitHub. Ocením každou zpětnou vazbu a nápady na jejich
+            zlepšení. Můžeš otevřít issue, nebo rovnou vytvořit pull request.
           </p>
           <Repositories />
         </Block>

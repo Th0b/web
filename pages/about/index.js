@@ -7,6 +7,8 @@ import ContactForm from "layouts/ContactForm/ContactForm";
 //Components
 import Block from "components/Block/Block";
 import PageHead from "components/PageHead/PageHead";
+//Constants
+import * as Constants from "constants";
 
 export default function About() {
   //Because recaptcha loading
@@ -24,23 +26,39 @@ export default function About() {
         <Block>
           <h1>O mně</h1>
           <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industrys standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book. It has survived not
-            only five centuries, but also the leap into electronic typesetting,
-            remaining essentially unchanged. It was popularised in the 1960s
-            with the release of Letraset sheets containing Lorem Ipsum passages,
-            and more recently with desktop publishing software like Aldus
-            PageMaker including versions of Lorem Ipsum.
+            Jsem mladý, věřím že i potenciální student maturitního ročníku
+            informačních technologií se zaměřením na síťové technologie na
+            střední průmyslové škole elektrotechniky a informatiky v Ostravě a
+            pocházím z malého městečka poblíž Ostravy. Sítě však nejsou mým
+            jediným zájmem, a mimo ně tvoří neopominutelnou část mnou stráveného
+            volného času programování a fotografování. Více se dočteš v
+            jednotlivých sekcích věnovaných danému oboru.
+          </p>
+          <p>
+            Jsem otevřený všem novým příležitostem a v případě zájmu o
+            spolupráci, mě tak neváhej kontaktovat.
           </p>
         </Block>
         <Block>
           <h2>Životopis</h2>
+          <p>
+            Můj aktuální životopis si můžeš zobrazit a stáhnout{" "}
+            <a href={"/resume.pdf"} target="_blank" rel="noreferrer noopener">
+              zde.
+            </a>
+          </p>
         </Block>
         <Block>
-          <h2>Zanechej mi zprávu</h2>
-          <p>A já se ti ozvu...</p>
+          <h2>Kontaktuj mě</h2>
+          <p>
+            Zaujala tě má tvorba ať už v oblasti IT, nebo v rámci fotografování?
+            Zanech mi zprávu pomocí formuláře, nebo mi napiš přímo na emailovou
+            adresu{" "}
+            <a href={"mailto: " + Constants.EMAIL_ADDRESS}>
+              {Constants.EMAIL_ADDRESS}
+            </a>
+            , a já se ti ozvu během následujících dní.
+          </p>
           {mounted && <ContactForm />}
         </Block>
       </main>
