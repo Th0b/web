@@ -1,9 +1,8 @@
 @import "styles/variables"
 
 .header
-    min-height: 85px
+    min-height: 60px
     width: 100vw
-    line-height: 85px
     color: $fontSecondaryColor
     background-color: $tertiaryColor
     position: fixed
@@ -11,25 +10,30 @@
     z-index: 100
     clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - 17px), 0% 100%)
     user-select: none
+    transition: padding 0.5s ease-in-out
 .logo
     height: 60px
     width: 60px
     position: relative
     float: left
     cursor: pointer
-    transition: margin 0.5s ease-in-out
 
 .name
+    height: 60px
+    width: auto
     float: left
     cursor: pointer
-    font-size: 30px
+    font-size: 35px
+    line-height: 60px
     font-weight: bold
-    padding: 0
+    margin: 0 15px
+
 .hamburgerContainer
     position: relative
     float: right
-    height: 65px
-    margin: 10px 20px
+    height: 48px
+    width: 48px
+    margin: 0 //6px 0 middle
 
 .navigation
     ul
@@ -40,39 +44,39 @@
         a
             text-decoration: none
 
-@media (max-width: 770px)
+@media (max-width: 800px)
+    .header
+        padding: 10px 30px
     .hamburgerContainer
         display: block
-    .logo
-        margin: 10px 20px
     .navigation[data-visible=true]
         max-height: 290px //random
     .navigation[data-visible=false]
         max-height: 0
     .navigation
         transition: max-height 0.5s ease-in-out
-        width: 100vw
-        margin-top: 85px
+        float: left
+        width: 100%
         ul
             flex-wrap: wrap
-            margin-bottom: 30px
+            margin-top: 20px
+            margin-bottom: 20px
             li
                 width: 100%
                 a
                     height: 50px
-                    padding-left: 60px
+                    padding-left: 30px
                     line-height: 50px
                     font-size: 18px
                     display: block
 
-@media (min-width: 770px)
+@media (min-width: 800px)
+    .header
+        padding: 10px 70px
     .hamburgerContainer
         display: none
-    .logo
-        margin: 10px 20px 10px 50px
     .navigation
-        height: 65px
-        margin: 10px 50px
+        height: 60px
         padding: 0
         float: right
         ul
@@ -82,7 +86,7 @@
                     padding: 0 15px
                     display: block
                     height: 50px
-                    line-height: 45px //random
+                    line-height: 40px //random
             li:hover ~ .dot
                 -webkit-transition: all 0.2s ease-in-out
                 transition: all 0.2s ease-in-out

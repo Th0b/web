@@ -12,13 +12,13 @@ export default function Header() {
   return (
     <header className={styles.header}>
       <Link href="/">
-        <img className={styles.logo} src="/favicon.ico" alt="Logo" />
+        <img className={styles.logo} src="/logo.png" alt="Logo" />
       </Link>
       <Link href="/">
-        <span className={styles.name}>Tobiáš Návrat</span>
+        <div className={styles.name}>Tobiáš Návrat</div>
       </Link>
       <div className={styles.hamburgerContainer}>
-        <Hamburger toggled={menuIsOpen} toggle={setMenuIsOpen} />
+        <Hamburger rounded toggled={menuIsOpen} toggle={setMenuIsOpen} />
       </div>
       <nav data-visible={menuIsOpen} className={styles.navigation}>
         <ul>
