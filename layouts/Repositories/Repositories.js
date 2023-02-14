@@ -21,18 +21,17 @@ export default function Repositories() {
   return (
     <>
       <FetchProcess status={status} />
-      {status==="success" && (
+      {status === "success" && (
         <div className={styles.repositories}>
           {repositories &&
             repositories.map((repository) => (
-              <>
-                <Repository
-                  name={repository.name}
-                  url={repository.html_url}
-                  description={repository.description}
-                  lastUpdate={repository.pushed_at}
-                />
-              </>
+              <Repository
+                key={repository.id}
+                name={repository.name}
+                url={repository.html_url}
+                description={repository.description}
+                lastUpdate={repository.pushed_at}
+              />
             ))}
         </div>
       )}

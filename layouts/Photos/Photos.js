@@ -22,16 +22,14 @@ export default function Photos({ quantity }) {
   return (
     <>
       <FetchProcess status={status} />
-      {status==="success" && photos !== undefined && (
+      {status === "success" && photos !== undefined && (
         <div className={styles.photos}>
           {photos.slice(0, quantity).map((photo) => (
-            <>
-              <Photo
-                url={photo.media_url}
-                id={photo.id}
-                caption={photo.caption}
-              />
-            </>
+            <Photo
+              key={photo.id}
+              url={photo.media_url}
+              caption={photo.caption}
+            />
           ))}
         </div>
       )}

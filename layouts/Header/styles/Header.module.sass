@@ -30,6 +30,10 @@
     float: right
     height: 65px
     margin: 10px 20px
+.hamburgerContainer[data-visible=true]
+    display: block
+.hamburgerContainer[data-visible=false]
+    display: none
 
 .navigation
     ul
@@ -43,8 +47,9 @@
 @media (max-width: 770px)
     .navigation[data-visible=true]
         max-height: 290px //random
-    .navigation
+    .navigation[data-visible=false]
         max-height: 0
+    .navigation
         transition: max-height 0.5s ease-in-out
         width: 100vw
         margin-top: 85px
@@ -68,8 +73,8 @@
             flex-wrap: nowrap
             li
                 height: 50px
-                line-height: 45px
-                a
+                line-height: 45px //random
+                a   
                     padding: 0 15px
             li:hover ~ .dot
                 -webkit-transition: all 0.2s ease-in-out

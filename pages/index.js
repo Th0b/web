@@ -7,8 +7,6 @@ import Photos from "layouts/Photos/Photos";
 import Block from "components/Block/Block";
 import PageHead from "components/PageHead/PageHead";
 import Link from "next/link";
-//Styles
-import styles from "styles/index.module.sass";
 
 export default function Home() {
   return (
