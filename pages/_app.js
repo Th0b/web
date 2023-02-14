@@ -1,5 +1,7 @@
 //Google analytics
 import Script from "next/script";
+//Styles
+import '../styles/globals.css'
 
 function MyApp({ Component, pageProps }) {
   return (
