@@ -14,10 +14,10 @@
 .logo
     height: 60px
     width: 60px
-    margin: 10px 20px
     position: relative
     float: left
     cursor: pointer
+    transition: margin 0.5s ease-in-out
 
 .name
     float: left
@@ -30,10 +30,6 @@
     float: right
     height: 65px
     margin: 10px 20px
-.hamburgerContainer[data-visible=true]
-    display: block
-.hamburgerContainer[data-visible=false]
-    display: none
 
 .navigation
     ul
@@ -45,6 +41,10 @@
             text-decoration: none
 
 @media (max-width: 770px)
+    .hamburgerContainer
+        display: block
+    .logo
+        margin: 10px 20px
     .navigation[data-visible=true]
         max-height: 290px //random
     .navigation[data-visible=false]
@@ -57,13 +57,19 @@
             flex-wrap: wrap
             margin-bottom: 30px
             li
-                height: 50px
                 width: 100%
-                padding-left: 40px
-                line-height: 50px
-                font-size: 18px
+                a
+                    height: 50px
+                    padding-left: 60px
+                    line-height: 50px
+                    font-size: 18px
+                    display: block
 
-@media (min-width: 771px)
+@media (min-width: 770px)
+    .hamburgerContainer
+        display: none
+    .logo
+        margin: 10px 20px 10px 50px
     .navigation
         height: 65px
         margin: 10px 50px
@@ -72,10 +78,11 @@
         ul
             flex-wrap: nowrap
             li
-                height: 50px
-                line-height: 45px //random
-                a   
+                a
                     padding: 0 15px
+                    display: block
+                    height: 50px
+                    line-height: 45px //random
             li:hover ~ .dot
                 -webkit-transition: all 0.2s ease-in-out
                 transition: all 0.2s ease-in-out
