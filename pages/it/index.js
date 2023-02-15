@@ -8,7 +8,7 @@ import Skills from "layouts/Skills/Skills";
 import Block from "components/Block/Block";
 import PageHead from "components/PageHead/PageHead";
 //Constants
-import * as Constants from "constants";
+import Constants from "constants";
 
 export default function Projects() {
   return (

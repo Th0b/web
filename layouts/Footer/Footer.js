@@ -1,5 +1,5 @@
 //Constants
-import * as Constants from "constants";
+import Constants from "constants";
 //Styles
 import styles from "./styles/Footer.module.sass";
 
@@ -8,7 +8,7 @@ export default function Footer() {
   const facebookIcon = "/SocialSites/facebook.png";
   const instagramIcon = "/SocialSites/instagram.png";
   const githubIcon = "/SocialSites/github.png";
-  const buymeacoffeIcon = "/SocialSites/buymeacoffee.svg";
+  const buymeacoffeeIcon = "/SocialSites/buymeacoffee.svg";
 
   return (
     <footer className={styles.footer}>
@@ -55,8 +55,8 @@ export default function Footer() {
         >
           <img
             className={styles.icon}
-            src={buymeacoffeIcon}
-            alt="Buymeacoffe Logo"
+            src={buymeacoffeeIcon}
+            alt="Buymeacoffee Logo"
           />
         </a>
       </div>
