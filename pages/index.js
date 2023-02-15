@@ -32,8 +32,7 @@ export default function Home() {
           </p>
           <GithubCalendar />
           <p>
-            Neustále se v této oblasti vzdělávám a chci znát a ovládat víc a
-            víc. Více o mně a IT najdeš <Link href="/it">zde</Link>.
+            Neustále se v této oblasti vzdělávám a vidím v ní obrovský potenciál. Více o mně a IT najdeš <Link href="/it">zde</Link>.
           </p>
         </Block>
         <Block name="Fotografování" url="/photography">
