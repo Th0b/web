@@ -19,7 +19,7 @@ export default function Document() {
           strategy="lazyOnload"
           src={`https://www.googletagmanager.com/gtag/js?id=G-LPQ6KHGMG7`}
         />
-        <Script strategy="lazyOnload">
+        <Script id='google-analytics' strategy="lazyOnload">
           {`
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
