@@ -16,18 +16,16 @@ export default function Document() {
         <Main />
         <NextScript />
         <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-LPQ6KHGMG7"
           strategy="afterInteractive"
+          src="https://www.googletagmanager.com/gtag/js?id=G-LPQ6KHGMG7"
         />
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
-     window.dataLayer = window.dataLayer || [];
-     function gtag(){dataLayer.push(arguments);}
-     gtag('js', new Date());
-   
-     gtag('config', 'G-LPQ6KHGMG7');
-        `}
-        </Script>
+        <Script
+          id="google-analytics"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date());gtag('config', 'G-LPQ6KHGMG7', {page_path: window.location.pathname,});`,
+          }}
+        />
       </body>
     </Html>
   );
