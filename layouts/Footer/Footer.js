@@ -8,6 +8,8 @@ export default function Footer() {
   const facebookIcon = "/SocialSites/facebook.png";
   const instagramIcon = "/SocialSites/instagram.png";
   const githubIcon = "/SocialSites/github.png";
+  const buymeacoffeIcon = "/SocialSites/buymeacoffee.svg";
+
   return (
     <footer className={styles.footer}>
       <div>
@@ -26,11 +28,7 @@ export default function Footer() {
           target="_blank"
           rel="noreferrer noopener"
         >
-          <img
-            className={styles.icon}
-            src={facebookIcon}
-            alt="Facebook Logo"
-          ></img>
+          <img className={styles.icon} src={facebookIcon} alt="Facebook Logo" />
         </a>
         <a
           href={Constants.INSTAGRAM_URL}
@@ -40,15 +38,26 @@ export default function Footer() {
           <img
             className={styles.icon}
             src={instagramIcon}
-            alt="Instragram Logo"
-          ></img>
+            alt="Instagram Logo"
+          />
         </a>
         <a
           href={Constants.GITHUB_URL}
           target="_blank"
           rel="noreferrer noopener"
         >
-          <img className={styles.icon} src={githubIcon} alt="Github Logo"></img>
+          <img className={styles.icon} src={githubIcon} alt="Github Logo" />
+        </a>
+        <a
+          href={Constants.BUYMEACOFFEE_URL}
+          target="_blank"
+          rel="noreferrer noopener"
+        >
+          <img
+            className={styles.icon}
+            src={buymeacoffeIcon}
+            alt="Buymeacoffe Logo"
+          />
         </a>
       </div>
     </footer>

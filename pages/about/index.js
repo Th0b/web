@@ -36,7 +36,12 @@ export default function About() {
           </p>
           <p>
             Jsem otevřený všem novým příležitostem a v případě zájmu o
-            spolupráci, mě tak neváhej kontaktovat.
+            spolupráci, mě tak neváhej kontaktovat. Pokud bys mě chtěl podpořit,
+            můžeš mi za pár korun koupit horkou čokoládu{" "}
+            <a href={Constants.BUYMEACOFFEE_URL} target="_blank" rel="noreferrer noopener">
+              zde
+            </a>
+            .
           </p>
         </Block>
         <Block>
@@ -44,8 +49,9 @@ export default function About() {
           <p>
             Můj aktuální životopis si můžeš zobrazit a stáhnout{" "}
             <a href={"/resume.pdf"} target="_blank" rel="noreferrer noopener">
-              zde.
+              zde
             </a>
+            .
           </p>
         </Block>
         <Block>
