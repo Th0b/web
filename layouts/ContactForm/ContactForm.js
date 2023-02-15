@@ -7,7 +7,7 @@ import { dataPost } from "utils/dataPost";
 //Components
 import Loading from "components/Loading/Loading";
 //Constants
-import Constants from "constants";
+import Constants from "/constants";
 //Styles
 import styles from "./styles/ContactForm.module.sass";
 

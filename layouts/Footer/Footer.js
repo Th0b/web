@@ -1,5 +1,5 @@
 //Constants
-import Constants from "constants";
+import Constants from "/constants";
 //Styles
 import styles from "./styles/Footer.module.sass";
 

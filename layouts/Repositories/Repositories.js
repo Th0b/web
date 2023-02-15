@@ -5,7 +5,7 @@ import { dataFetch } from "utils/dataFetch";
 import Repository from "./components/Repository";
 import FetchProcess from "components/FetchProcess/FetchProcess.js";
 //Constants
-import Constants from "constants"
+import Constants from "/constants"
 //Styles
 import styles from "./styles/Repositories.module.sass";
 

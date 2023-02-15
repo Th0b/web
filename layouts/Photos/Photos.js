@@ -6,7 +6,7 @@ import { dataFetch } from "utils/dataFetch";
 import Photo from "./components/Photo.js";
 import FetchProcess from "components/FetchProcess/FetchProcess.js";
 //Constants
-import Constants from "constants";
+import Constants from "/constants";
 //Styles
 import styles from "./styles/Photos.module.sass";
 

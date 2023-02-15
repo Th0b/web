@@ -8,7 +8,7 @@ import ContactForm from "layouts/ContactForm/ContactForm";
 import Block from "components/Block/Block";
 import PageHead from "components/PageHead/PageHead";
 //Constants
-import Constants from "constants";
+import Constants from "/constants";
 
 export default function About() {
   //Because recaptcha loading
