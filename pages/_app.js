@@ -7,7 +7,7 @@ import "../styles/globals.sass";
 function MyApp({ Component, pageProps }) {
   return (
     <>
-      <GoogleAnalytics gaMeasurementId="G-LPQ6KHGMG7" trackPageViews />
+      <GoogleAnalytics trackPageViews />
       <Component {...pageProps} />
       <Analytics />
     </>
