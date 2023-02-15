@@ -30,11 +30,11 @@ export default function Projects() {
             rozhodl jsem pro ně.
           </p>
           <p>
-            Dnes se nejvíc věnuji vytváření webů a webových aplikací. Pracuji
-            jako junior front-end developer ve firmě Brainsov Solutions, kde
-            vyvíjíme převážně aplikace pro obchodní centra. Také spravuji
-            několik wordpress webů neziskovým organizacím a sám se snažím
-            vyvíjet nejen různé open source webové aplikace.
+            Dnes se nejvíc věnuji vytváření webů a webových aplikací. Také
+            spravuji několik wordpress webů neziskovým organizacím a sám se
+            snažím vyvíjet nejen různé open source webové aplikace. V minulosti
+            jsem pracoval jako junior front-end developer ve firmě Brainsov
+            Solutions, kde jsem vyvíjel převážně aplikace pro obchodní centra.
           </p>
         </Block>
         <Block>
