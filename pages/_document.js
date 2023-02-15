@@ -1,5 +1,6 @@
 //Components
 import { Html, Head, Main, NextScript } from "next/document";
+import { GoogleAnalytics } from "nextjs-google-analytics";
 
 export default function Document() {
   return (
@@ -14,6 +15,7 @@ export default function Document() {
       <body>
         <Main />
         <NextScript />
+        <GoogleAnalytics gaMeasurementId="G-LPQ6KHGMG7" strategy="lazyOnload" trackPageViews />
       </body>
     </Html>
   );
