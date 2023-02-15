@@ -8,7 +8,6 @@ function MyApp({ Component, pageProps }) {
     <>
       <GoogleAnalytics
         gaMeasurementId="G-LPQ6KHGMG7"
-        strategy="lazyOnload"
         trackPageViews
       />
       <Component {...pageProps} />
