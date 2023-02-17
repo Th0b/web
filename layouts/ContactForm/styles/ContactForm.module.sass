@@ -103,13 +103,14 @@
             margin-top: -3px //random number
         .submitMessageText
             font-size: 10px
-    .submit:disabled
-        cursor: not-allowed
     .submit[data-status=""]
         background-color: $tertiaryColor
-    .submit[data-status="loading"], .submit:hover:enabled, .submit:disabled
+    .submit[data-status="loading"], .submit:disabled
         background-color: $primaryColor
         color: $tertiaryColor
+        cursor: not-allowed
+    .submit:hover:enabled
+        color: $primaryColor
     .submit[data-status="success"]
         background-color: $successColor
     .submit[data-status="error"]

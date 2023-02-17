@@ -182,8 +182,7 @@ export default function ContactForm() {
           <>
             <div className={styles.submitMessageHeader}>Formulář se nepodařilo odeslat</div>
             <div className={styles.submitMessageText}>
-              Zkontroluj své internetové připojení a zkus to znovu, nebo mne kontaktuj jinou
-              cestou.
+              Zkontroluj své internetové připojení a zkus to znovu
             </div>
           </>
         )}
@@ -191,7 +190,7 @@ export default function ContactForm() {
           <>
             <div className={styles.submitMessageHeader}>Formulář byl úspěšně odeslán</div>
             <div className={styles.submitMessageText}>
-              Ozvu se ti během následujících dní.
+              Ozvu se ti během následujících dní
             </div>
           </>
         )}
