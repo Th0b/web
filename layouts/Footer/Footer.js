@@ -22,7 +22,7 @@ export default function Footer() {
           Nahlásit chybu
         </a>
       </div>
-      |<div>&#169;2022-{yearNow}</div>|<div>Tobiáš Návrat</div>|
+      |<div>&#169; 2022-{yearNow}</div>|<div>Tobiáš Návrat</div>|
       <div>
         <a
           href={Constants.BUYMEACOFFEE_URL}
