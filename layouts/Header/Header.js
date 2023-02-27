@@ -1,5 +1,5 @@
 //Hooks
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 //Components
 import Link from "next/link";
 import Hamburger from "hamburger-react";
@@ -8,9 +8,26 @@ import styles from "./styles/Header.module.sass";
 
 export default function Header() {
   const [menuIsOpen, setMenuIsOpen] = useState(false);
+  const menuRef = useRef();
+
+  useEffect(() => {
+    const checkIfClickedOutside = (e) => {
+      if (
+        menuIsOpen &&
+        menuRef.current &&
+        !menuRef.current.contains(e.target)
+      ) {
+        setMenuIsOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", checkIfClickedOutside);
+    return () => {
+      document.removeEventListener("mousedown", checkIfClickedOutside);
+    };
+  }, [menuIsOpen]);
 
   return (
-    <header className={styles.header}>
+    <header className={styles.header} ref={menuRef}>
       <Link href="/">
         <img className={styles.logo} src="/logo.png" alt="Logo" />
       </Link>
