@@ -14,7 +14,7 @@ export default function Home() {
       <main>
         <div>
           <h1>Vítejte na mém webu</h1>
-          <p>Ale ne dnes...</p>
+          <p>Ale ne dnes.</p>
         </div>
       </main>
     </>
