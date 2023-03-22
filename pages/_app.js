@@ -1,23 +1,15 @@
-//Google analytics
-import Script from "next/script";
+//Site measure
+import { GoogleAnalytics } from "nextjs-google-analytics";
+import { Analytics } from "@vercel/analytics/react";
 //Styles
-import '../styles/globals.css'
+import 'styles/globals.css'
 
 function MyApp({ Component, pageProps }) {
   return (
     <>
-      <Script
-        strategy="afterInteractive"
-        src="https://www.googletagmanager.com/gtag/js?id=G-V4DCQV30HJ"
-      />
-      <Script
-        id="google-analytics"
-        strategy="afterInteractive"
-        dangerouslySetInnerHTML={{
-          __html: `window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-XXXXXXX', {page_path: window.location.pathname,});`,
-        }}
-      />
+      <GoogleAnalytics trackPageViews />
       <Component {...pageProps} />
+      <Analytics />
     </>
   );
 }
