@@ -5,7 +5,7 @@ import { dataFetch } from "utils/dataFetch";
 import Repository from "./components/Repository";
 import FetchProcess from "components/FetchProcess/FetchProcess.js";
 //Constants
-import Constants from "/constants"
+import Constants from "/constants";
 //Styles
 import styles from "./styles/Repositories.module.sass";
 
@@ -24,15 +24,19 @@ export default function Repositories() {
       {status === "success" && (
         <div className={styles.repositories}>
           {repositories &&
-            repositories.map((repository) => (
-              <Repository
-                key={repository.id}
-                name={repository.name}
-                url={repository.html_url}
-                description={repository.description}
-                lastUpdate={repository.pushed_at}
-              />
-            ))}
+            repositories.map((repository) => {
+              if (!repository.fork) {
+                return (
+                  <Repository
+                    key={repository.id}
+                    name={repository.name}
+                    url={repository.html_url}
+                    description={repository.description}
+                    lastUpdate={repository.pushed_at}
+                  />
+                );
+              }
+            })}
         </div>
       )}
     </>
