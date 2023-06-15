@@ -26,7 +26,8 @@ const handler = async (request, response) => {
       throw new Error("Request is not POST method");
     }
 
-    const data = JSON.parse(request.body);
+    const data = request.body;
+
     const { firstName, lastName, email, subject, message } = data;
 
     if (!firstName && !lastName && !email && !subject && !message) {
