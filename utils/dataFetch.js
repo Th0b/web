@@ -1,4 +1,4 @@
-export async function dataFetch(setStatus, setResult, url, location) {
+export const dataFetch = async (setStatus, setResult, url, location) => {
   try {
     setStatus("loading");
     const response = await fetch(url);
@@ -10,10 +10,9 @@ export async function dataFetch(setStatus, setResult, url, location) {
       setResult(result);
       console.log("Fetched: ", result);
     }
+    setStatus("success");
   } catch (error) {
     setStatus("error");
     console.log(error);
-  } finally {
-    setStatus("success");
   }
-}
+};

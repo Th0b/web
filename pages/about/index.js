@@ -38,7 +38,11 @@ export default function About() {
             Jsem otevřený všem novým příležitostem a v případě zájmu o
             spolupráci, mě tak neváhej kontaktovat. Pokud bys mě chtěl podpořit,
             můžeš mi za pár korun koupit horkou čokoládu{" "}
-            <a href={Constants.BUYMEACOFFEE_URL} target="_blank" rel="noreferrer noopener">
+            <a
+              href={Constants.BUYMEACOFFEE_URL}
+              target="_blank"
+              rel="noreferrer noopener"
+            >
               zde
             </a>
             .
@@ -60,8 +64,8 @@ export default function About() {
             Zaujala tě má tvorba ať už v oblasti IT, nebo v rámci fotografování?
             Zanech mi zprávu pomocí formuláře, nebo mi napiš přímo na emailovou
             adresu{" "}
-            <a href={"mailto: " + Constants.EMAIL_ADDRESS}>
-              {Constants.EMAIL_ADDRESS}
+            <a href={"mailto: " + Constants.SECONDARY_EMAIL_ADDRESS}>
+              {Constants.SECONDARY_EMAIL_ADDRESS}
             </a>
             , a já se ti ozvu během následujících dní.
           </p>

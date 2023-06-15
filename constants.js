@@ -1,8 +1,10 @@
 const Constants = {
   //API urls
   GITHUB_API: "https://api.github.com/users/th0be/repos",
-  INSTAGRAM_API: "https://graph.instagram.com/me/media?fields=id,media_url,caption&access_token=",
-  CONTACT_FORM_API: "https://xd.xd",
+  BASE_INSTAGRAM_API:
+    "https://graph.instagram.com/me/media?fields=id,media_url,caption,permalink&access_token=",
+  THUMBNAIL_INSTAGRAM_API:
+    "https://graph.facebook.com/v17.0/instagram_oembed?url=",
 
   //Social sites names
   GITHUB_USERNAME: "Th0be",
@@ -17,7 +19,8 @@ const Constants = {
 
   //Other
   GITHUB_ISSUE: "https://github.com/Th0be/Website/issues/new",
-  EMAIL_ADDRESS: "navrat.tobias@gmail.com"
+  PRIMARY_EMAIL_ADDRESS: "th0betheth0be@gmail.com",
+  SECONDARY_EMAIL_ADDRESS: "navrat.tobias@gmail.com",
 };
 
 export default Constants;

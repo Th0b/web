@@ -6,14 +6,11 @@ import { useRecaptcha } from "react-hook-recaptcha";
 import { dataPost } from "utils/dataPost";
 //Components
 import Loading from "components/Loading/Loading";
-//Constants
-import Constants from "/constants";
 //Styles
 import styles from "./styles/ContactForm.module.sass";
 
 export default function ContactForm() {
   const [status, setStatus] = useState("");
-  const url = Constants.CONTACT_FORM_API;
 
   //Forms settings
   const {
@@ -81,9 +78,7 @@ export default function ContactForm() {
   });
 
   const onSubmit = (data) => {
-    dataPost(setStatus, url, data);
-    console.log(data);
-    console.log(result);
+    dataPost(setStatus, "/api/contact", data);
   };
 
   return (
@@ -180,7 +175,9 @@ export default function ContactForm() {
         {status === "loading" && <Loading />}
         {status === "error" && (
           <>
-            <div className={styles.submitMessageHeader}>Formulář se nepodařilo odeslat</div>
+            <div className={styles.submitMessageHeader}>
+              Formulář se nepodařilo odeslat
+            </div>
             <div className={styles.submitMessageText}>
               Zkontroluj své internetové připojení a zkus to znovu
             </div>
@@ -188,7 +185,9 @@ export default function ContactForm() {
         )}
         {status === "success" && (
           <>
-            <div className={styles.submitMessageHeader}>Formulář byl úspěšně odeslán</div>
+            <div className={styles.submitMessageHeader}>
+              Formulář byl úspěšně odeslán
+            </div>
             <div className={styles.submitMessageText}>
               Ozvu se ti během následujících dní
             </div>

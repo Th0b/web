@@ -1,21 +1,21 @@
-export async function dataPost(setStatus, url, data) {
+export const dataPost = async (setStatus, url, data) => {
   try {
     setStatus("loading");
-    const header = {
-      Accept: "application/json",
-      "Content-Type": "application/json",
-    };
     const body = JSON.stringify(data);
     const response = await fetch(url, {
       method: "POST",
-      headers: header,
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
       body: body,
     });
-    const result = await response.json();
-    if (result.status === 200) setStatus("success");
-    else new Error("Another type of error");
+    if (response.status !== 200) {
+      throw new Error(response.message);
+    }
+    setStatus("success");
   } catch (error) {
-    setStatus("error");
     console.log(error);
+    setStatus("error");
   }
-}
+};
