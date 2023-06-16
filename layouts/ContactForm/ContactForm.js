@@ -32,17 +32,9 @@ export default function ContactForm() {
   const formOptions = {
     firstName: {
       required: "Jméno je potřeba vyplnit",
-      pattern: {
-        value: /[A-Z][a-z]*/,
-        message: "Jméno musí začínat velkým písmenem",
-      },
     },
     lastName: {
       required: "Příjmení je potřeba vyplnit",
-      pattern: {
-        value: /[A-Z][a-z]*/,
-        message: "Jméno musí začínat velkým písmenem",
-      },
     },
     email: {
       required: "Email je potřeba vyplnit",
