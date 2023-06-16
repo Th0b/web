@@ -5,8 +5,7 @@ import path from "path";
 import ejs from "ejs";
 
 const loadAndRenderTemplate = (templateFile, replacements) => {
-  const templatePath = path.join(__dirname, "../../../../html/" + templateFile);
-  console.log(__dirname, templatePath);
+  const templatePath = path.join(process.cwd(), "/html/" + templateFile);
   const template = fs.readFileSync(templatePath, "utf-8");
   const templateContent = ejs.render(template, replacements);
   return templateContent;
