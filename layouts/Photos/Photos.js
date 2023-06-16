@@ -10,13 +10,23 @@ import Constants from "/constants";
 //Styles
 import styles from "./styles/Photos.module.sass";
 
+//Photoswipe
+import "photoswipe/dist/photoswipe.css";
+import { Gallery, Item } from "react-photoswipe-gallery";
+
 export default function Photos({ quantity }) {
   const [photos, setPhotos] = useState();
   const [status, setStatus] = useState("");
-  const url = Constants.INSTAGRAM_API + process.env.NEXT_PUBLIC_INSTAGRAM_TOKEN;
+  const baseUrl =
+    Constants.BASE_INSTAGRAM_API + process.env.NEXT_PUBLIC_INSTAGRAM_TOKEN;
+  const thumbnailUrl =
+    Constants.THUMBNAIL_INSTAGRAM_API +
+    "www.instagram.com/p/fA9uwTtkSN/&access_token=" +
+    process.env.NEXT_PUBLIC_INSTAGRAM_TOKEN;
 
   useEffect(() => {
-    dataFetch(setStatus, setPhotos, url, "data");
+    dataFetch(setStatus, setPhotos, baseUrl, "data");
+    console.log(photos);
   }, []);
 
   return (

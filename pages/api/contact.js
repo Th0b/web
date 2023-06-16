@@ -17,6 +17,13 @@ const sendEmail = async (to, subject, html) => {
     to,
     subject,
     html,
+    attachments: [
+      {
+        filename: "logo.png",
+        path: path.join(process.cwd(), "/public/logo.png"),
+        cid: "logo",
+      },
+    ],
   });
 };
 
@@ -58,7 +65,7 @@ const handler = async (request, response) => {
     const myEmail = Constants.SECONDARY_EMAIL_ADDRESS;
 
     const myEmailSubject = "Webový formulář - " + subject;
-    const senderEmailSubject = "Potvrzení o přijetí žádosti - " + subject;
+    const senderEmailSubject = "Potvrzení o odeslání formuláře - " + subject;
 
     await sendEmail(myEmail, myEmailSubject, myEmailContent);
     await sendEmail(senderEmail, senderEmailSubject, senderEmailContent);

@@ -3,56 +3,84 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Email</title>
     <style>
       body {
-        font-family: "Serif";
-        padding: 10px 20px;
+        font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+          Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+        padding: 20px;
         margin: 0;
       }
+      h1 {
+        margin: 10px 0;
+      }
+      p {
+        margin: 5px 0;
+      }
       table {
-        border: 5px solid;
-      }
-      th,
-      td {
-        border: 2px solid;
-        border-collapse: collapse;
-        text-align: center;
-      }
-      table,
-      th,
-      td {
-        border-collapse: collapse;
+        clear: both;
+        border-radius: 30px;
         padding: 10px;
+        background-color: #becdd4;
+        margin: 20px 0;
+        text-align: left;
+      }
+      th,
+      td {
+        padding: 10px;
+        text-align: left;
+      }
+      .container {
+        padding: 30px;
+        border-radius: 15px;
+        background-color: #d9dbdcbf;
+      }
+      .logo {
+        height: 120px;
+        width: 120px;
+        float: left;
+      }
+      .first {
+        float: left;
+        height: 120px;
+        margin: 0 0px 20px 20px;
       }
     </style>
   </head>
   <body>
-    <p>
-      Vaše žádost byla úspěšně odeslána, zkontrolovat si ji může níže. Odpovídám
-      obyvkle během několika dnů.
-    </p>
-    <table>
-      <tr>
-        <th>Jméno a příjmení:</th>
-        <td><%= firstName %> <%= lastName %></td>
-      </tr>
-      <tr>
-        <th>Email:</th>
-        <td><%= email %></td>
-      </tr>
-      <tr>
-        <th>Předmět:</th>
-        <td><%= subject %></td>
-      </tr>
-      <tr>
-        <th>Zpráva:</th>
-        <td><%= message %></td>
-      </tr>
-    </table>
-    <p>
-      V případě jakkýchkoliv dotazů mě neváhejte kontaktovat. Tato zpráva byla
-      vygenerována automaticky, není nutné na ni odpovídat.
-    </p>
+    <div class="container">
+      <img src="cid:logo" class="logo" />
+      <div class="first">
+        <h1>Úspěšně jsem obdržel Vaši žádost !</h1>
+        <p>
+          Děkuji za vyplnění formuláře. Níže si můžete ověřit Vámi zadané
+          informace.
+        </p>
+        <p>
+          Běžně zvládám odpovídat během několika dnů. V případě jakkýchkoliv
+          dotazů mě neváhejte kontaktovat.
+        </p>
+      </div>
+      <table>
+        <tr>
+          <th>Jméno a příjmení</th>
+          <td><%= firstName %> <%= lastName %></td>
+        </tr>
+        <tr>
+          <th>Email</th>
+          <td><%= email %></td>
+        </tr>
+        <tr>
+          <th>Předmět</th>
+          <td><%= subject %></td>
+        </tr>
+        <tr>
+          <th>Zpráva</th>
+          <td><%= message %></td>
+        </tr>
+      </table>
+      <p>
+        Tato zpráva byla vygenerována automaticky, není nutné na ni odpovídat.
+      </p>
+    </div>
   </body>
 </html>
