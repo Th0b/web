@@ -29,7 +29,7 @@ module.exports = {
       },
       {
         // Matching all API routes
-        source: "//graph.instagram.com/:path*",
+        source: "//piwigo.navrattobias.cz/:path*",
         headers: [
           { key: "Access-Control-Allow-Credentials", value: "true" },
           { key: "Access-Control-Allow-Origin", value: "*" },
