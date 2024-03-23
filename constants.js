@@ -1,10 +1,8 @@
 const Constants = {
   //API urls
   GITHUB_API: "https://api.github.com/users/th0be/repos",
-  BASE_INSTAGRAM_API:
-    "https://graph.instagram.com/me/media?fields=id,media_url,caption,permalink&access_token=",
-  THUMBNAIL_INSTAGRAM_API:
-    "https://graph.facebook.com/v17.0/instagram_oembed?url=",
+  PIWIGO_API:
+    "https://piwigo.navrattobias.cz/ws.php?format=json&method=pwg.categories.getImages",
 
   //Social sites names
   GITHUB_USERNAME: "Th0be",

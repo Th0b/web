@@ -8,7 +8,7 @@ import PageHead from "components/PageHead/PageHead";
 //Constants
 import Constants from "/constants";
 
-export default function Gallery() {
+export default function Galllery() {
   return (
     <>
       <PageHead title="Fotografování" />
