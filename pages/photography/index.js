@@ -57,7 +57,7 @@ export default function Galllery() {
             </a>
             , který slouží jako mé primární místo pro sdílení mých výtvorů.
           </p>
-          <Photos />
+          <Photos quantity={50} />
         </Block>
       </main>
       <Footer />

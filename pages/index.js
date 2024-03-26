@@ -32,7 +32,8 @@ export default function Home() {
           </p>
           <GithubCalendar />
           <p>
-            Neustále se v této oblasti vzdělávám a vidím v ní obrovský potenciál. Více o mně a IT najdeš <Link href="/it">zde</Link>.
+            Neustále se v této oblasti vzdělávám a vidím v ní obrovský
+            potenciál. Více o mně a IT najdeš <Link href="/it">zde</Link>.
           </p>
         </Block>
         <Block name="Fotografování" url="/photography">
@@ -43,7 +44,7 @@ export default function Home() {
             fotím po večerech a nocích. Více o mně a fotografování najdeš{" "}
             <Link href="/photography">zde</Link>.
           </p>
-          <Photos quantity="4" />
+          <Photos quantity={15} />
         </Block>
       </main>
       <Footer />

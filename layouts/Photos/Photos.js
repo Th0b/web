@@ -25,7 +25,7 @@ export default function Photos({ quantity }) {
       {status === "success" && photos !== undefined && (
         <Gallery>
           <div className={styles.wrapper}>
-            {photos.result.images.map((image, index) => (
+            {photos.result.images.slice(0, quantity).map((image, index) => (
               <Photo image={image} key={index} />
             ))}
           </div>
@@ -64,7 +64,7 @@ function Photo({ image }) {
 }
 
 function getSpanEstimate(size) {
-  if (size > 3000) {
+  if (size > 5500) {
     return 2;
   }
 
