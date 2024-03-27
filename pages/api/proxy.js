@@ -1,15 +1,25 @@
 // Whole file exists only because CORS
-
+import Constants from "/constants";
 import https from "https";
 
 export default function handler(req, res) {
   const { apiTarget } = req.query;
   const apiConfigs = {
-    github: { hostname: "api.github.com", path: "/users/th0be/repos" },
-    piwigo: {
-      hostname: "piwigo.navrattobias.cz",
-      path: "/ws.php?format=json&method=pwg.categories.getImages",
-    },
+    github: (() => {
+      const url = new URL(Constants.GITHUB_API);
+      return {
+        hostname: url.hostname,
+        path: url.pathname + url.search,
+        headers: { "User-Agent": "Website" }, // Kvůli proxy a GitHub API (user-agent vybrán náhodně)
+      };
+    })(),
+    piwigo: (() => {
+      const url = new URL(Constants.PIWIGO_API);
+      return {
+        hostname: url.hostname,
+        path: url.pathname + url.search,
+      };
+    })(),
   };
   const options = apiConfigs[apiTarget] || {};
   options.method = req.method;

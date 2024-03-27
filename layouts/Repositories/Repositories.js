@@ -10,11 +10,10 @@ import styles from "./styles/Repositories.module.sass";
 export default function Repositories() {
   const [repositories, setRepositories] = useState();
   const [status, setStatus] = useState("");
-  const url = "https://api.github.com/users/th0be/repos";
-  // const url = "/api/proxy?apiTarget=github";
+  const url = "/api/proxy?apiTarget=github";
 
   useEffect(() => {
-    dataFetch(setStatus, setRepositories, url, "data");
+    dataFetch(setStatus, setRepositories, url);
   }, []);
 
   return (
