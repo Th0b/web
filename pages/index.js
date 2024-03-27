@@ -17,9 +17,9 @@ export default function Home() {
         <Block>
           <h1>Vítej</h1>
           <p>
-            Jsem mladý, věřím že i potenciální student maturitního ročníku
-            informačních technologií se zaměřením na síťové technologie. Sítě
-            však nejsou mým jediným zájmem a mimo ně tvoří neopominutelnou část
+            Jsem mladý, věřím že i potenciální bakalářský student informačních
+            technologií se zájmem o síťové technologie a kyberbezpečnost. To
+            však není mým jediným zájmem a mimo ně tvoří neopominutelnou část
             mnou stráveného volného času programování a fotografování.
           </p>
         </Block>
@@ -44,7 +44,7 @@ export default function Home() {
             fotím po večerech a nocích. Více o mně a fotografování najdeš{" "}
             <Link href="/photography">zde</Link>.
           </p>
-          <Photos quantity={15} />
+          <Photos quantity={10} />
         </Block>
       </main>
       <Footer />
