@@ -4,18 +4,17 @@ import { dataFetch } from "utils/dataFetch";
 //Components
 import Repository from "./components/Repository";
 import FetchProcess from "components/FetchProcess/FetchProcess.js";
-//Constants
-import Constants from "/constants";
 //Styles
 import styles from "./styles/Repositories.module.sass";
 
 export default function Repositories() {
   const [repositories, setRepositories] = useState();
   const [status, setStatus] = useState("");
-  const url = Constants.GITHUB_API;
+  const url = "https://api.github.com/users/th0be/repos";
+  // const url = "/api/proxy?apiTarget=github";
 
   useEffect(() => {
-    dataFetch(setStatus, setRepositories, url);
+    dataFetch(setStatus, setRepositories, url, "data");
   }, []);
 
   return (

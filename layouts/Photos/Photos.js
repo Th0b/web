@@ -4,8 +4,6 @@ import React, { useEffect, useState } from "react";
 import { dataFetch } from "utils/dataFetch";
 import FetchProcess from "components/FetchProcess/FetchProcess.js";
 import { Gallery, Item } from "react-photoswipe-gallery";
-//Constants
-import Constants from "/constants";
 //Styles
 import "photoswipe/dist/photoswipe.css";
 import styles from "./styles/Photos.module.sass";
@@ -13,10 +11,10 @@ import styles from "./styles/Photos.module.sass";
 export default function Photos({ quantity }) {
   const [photos, setPhotos] = useState();
   const [status, setStatus] = useState("");
-  const baseUrl = Constants.PIWIGO_API;
+  const url = "/api/proxy?apiTarget=piwigo";
 
   useEffect(() => {
-    dataFetch(setStatus, setPhotos, baseUrl);
+    dataFetch(setStatus, setPhotos, url);
   }, []);
 
   return (
