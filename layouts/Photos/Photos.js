@@ -34,11 +34,12 @@ export default function Photos({ quantity }) {
 }
 
 function Photo({ image }) {
+  const firstRatio = 3;
+  const secondRatio = 2;
   const style = {
-    gridColumnEnd: `span ${getSpanEstimate(image.width)}`,
-    gridRowEnd: `span ${getSpanEstimate(image.height)}`,
+    gridColumnEnd: `span ${firstRatio}`,
+    gridRowEnd: `span ${secondRatio}`,
   };
-
   return (
     <>
       <Item
@@ -59,12 +60,4 @@ function Photo({ image }) {
       </Item>
     </>
   );
-}
-
-function getSpanEstimate(size) {
-  if (size > 5500) {
-    return 2;
-  }
-
-  return 1;
 }
