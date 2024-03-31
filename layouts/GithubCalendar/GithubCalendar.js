@@ -38,6 +38,7 @@ export default function GithubCalendar() {
       <GitHubCalendar
         username="Th0be"
         labels={labels}
+        year={new Date().getFullYear()}
         weekStart="1"
         colorScheme="light"
         errorMessage="Data se nepodařilo načíst"
