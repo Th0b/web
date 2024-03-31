@@ -32,16 +32,16 @@ export default function GithubCalendar() {
       more: "Více",
     },
   };
-  const dateFormat = "D.M.Y";
-  const weekStart = 1;
+
   return (
     <>
       <GitHubCalendar
         username="Th0be"
         labels={labels}
-        dateFormat={dateFormat}
-        weekStart={weekStart}
-        style={{margin: "30px 0 10px 0"}}
+        weekStart="1"
+        colorScheme="light"
+        errorMessage="Data se nepodařilo načíst"
+        style={{ margin: "30px 0 10px 0" }}
       />
     </>
   );
