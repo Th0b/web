@@ -40,10 +40,10 @@ export default function Home() {
         <Block name="Fotografování" url="/photography">
           <p>
             Když zrovna pod rukama nemám klávesnici, je velká šance že to bude
-            foťák. Přesto, že se jedná spíš o koníček, než profesionální
+            foťák. Přestože se jedná spíš o koníček, než profesionální
             portfolio, snažím každou fotkou posouvat a dělat ji unikátní. Rád
-            dokumentuji unikátní chvíle a místa, hraju si se světlem, barvami si
-            a fotím po večerech a nocích. Více o mně a fotografování najdeš{" "}
+            dokumentuji jedinečné chvíle a místa, hraju si se světlem, barvami a
+            fotím po večerech či nocích. Více o mně a fotografování najdeš{" "}
             <Link href="/photography">zde</Link>.
           </p>
           <Photos quantity={10} />
