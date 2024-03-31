@@ -33,21 +33,19 @@ const handler = async (request, response) => {
       throw new Error("Request is not POST method");
     }
 
-    const data = request.body;
+    const { firstName, lastName, email, subject, message } = request.body;
 
-    const { firstName, lastName, email, subject, message } = data;
-
-    if (!firstName && !lastName && !email && !subject && !message) {
+    if (!firstName || !lastName || !email || !subject || !message) {
       throw new Error(
         "Request requires first name, last name, email, subject and message"
       );
     }
 
     const replacements = {
-      subject,
       firstName,
       lastName,
       email,
+      subject,
       message,
     };
 
@@ -62,7 +60,7 @@ const handler = async (request, response) => {
     );
 
     const senderEmail = email;
-    const myEmail = Constants.SECONDARY_EMAIL_ADDRESS;
+    const myEmail = Constants.CONTACT_EMAIL_ADDRESS;
 
     const myEmailSubject = "Webový formulář - " + subject;
     const senderEmailSubject = "Potvrzení o odeslání formuláře - " + subject;

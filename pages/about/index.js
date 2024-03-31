@@ -52,8 +52,8 @@ export default function About() {
             Zaujala tě má tvorba ať už v oblasti IT, nebo v rámci fotografování?
             Zanech mi zprávu pomocí formuláře, nebo mi napiš přímo na emailovou
             adresu{" "}
-            <a href={"mailto: " + Constants.EMAIL_ADDRESS}>
-              {Constants.EMAIL_ADDRESS}
+            <a href={"mailto: " + Constants.CONTACT_EMAIL_ADDRESS}>
+              {Constants.CONTACT_EMAIL_ADDRESS}
             </a>
             , a já se ti ozvu během následujících dní.
           </p>
