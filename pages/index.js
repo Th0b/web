@@ -7,6 +7,8 @@ import Photos from "layouts/Photos/Photos";
 import Block from "components/Block/Block";
 import PageHead from "components/PageHead/PageHead";
 import Link from "next/link";
+// Vercel
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export default function Home() {
   return (
@@ -50,6 +52,7 @@ export default function Home() {
         </Block>
       </main>
       <Footer />
+      <SpeedInsights />
     </>
   );
 }

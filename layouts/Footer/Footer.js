@@ -2,8 +2,6 @@
 import Constants from "/constants";
 //Styles
 import styles from "./styles/Footer.module.sass";
-// Vercel
-import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export default function Footer() {
   const yearNow = new Date().getFullYear();
@@ -80,7 +78,6 @@ export default function Footer() {
           </a>
         </div>
       </footer>
-      <SpeedInsights />
     </>
   );
 }
