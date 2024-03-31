@@ -26,18 +26,16 @@ export default function About() {
         <Block>
           <h1>O mně</h1>
           <p>
-            Jsem mladý, věřím že i potenciální student maturitního ročníku
-            informačních technologií se zaměřením na síťové technologie na
-            střední průmyslové škole elektrotechniky a informatiky v Ostravě a
-            pocházím z malého městečka poblíž Ostravy. Sítě však nejsou mým
-            jediným zájmem, a mimo ně tvoří neopominutelnou část mnou stráveného
-            volného času programování a fotografování. Více se dočteš v
-            jednotlivých sekcích věnovaných danému oboru.
+            Jsem mladý, věřím že i potenciální bakalářský student informačních
+            technologií se zájmem o síťové technologie a kyberbezpečnost. To
+            však není mým jediným zájmem a mimo ně tvoří neopominutelnou část
+            mnou stráveného volného času programování a fotografování. Více se
+            dočteš v jednotlivých sekcích věnovaných danému oboru.
           </p>
           <p>
             Jsem otevřený všem novým příležitostem a v případě zájmu o
             spolupráci, mě tak neváhej kontaktovat. Pokud bys mě chtěl podpořit,
-            můžeš mi za pár korun koupit horkou čokoládu{" "}
+            můžeš mi za pár korun třeba koupit horkou čokoládu{" "}
             <a
               href={Constants.BUYMEACOFFEE_URL}
               target="_blank"
@@ -49,23 +47,13 @@ export default function About() {
           </p>
         </Block>
         <Block>
-          <h2>Životopis</h2>
-          <p>
-            Můj aktuální životopis si můžeš zobrazit a stáhnout{" "}
-            <a href={"/resume.pdf"} target="_blank" rel="noreferrer noopener">
-              zde
-            </a>
-            .
-          </p>
-        </Block>
-        <Block>
           <h2>Kontaktuj mě</h2>
           <p>
             Zaujala tě má tvorba ať už v oblasti IT, nebo v rámci fotografování?
             Zanech mi zprávu pomocí formuláře, nebo mi napiš přímo na emailovou
             adresu{" "}
-            <a href={"mailto: " + Constants.SECONDARY_EMAIL_ADDRESS}>
-              {Constants.SECONDARY_EMAIL_ADDRESS}
+            <a href={"mailto: " + Constants.EMAIL_ADDRESS}>
+              {Constants.EMAIL_ADDRESS}
             </a>
             , a já se ti ozvu během následujících dní.
           </p>

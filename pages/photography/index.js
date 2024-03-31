@@ -18,25 +18,24 @@ export default function Galllery() {
           <h1>Fotografování</h1>
           <p>
             K fotografování jsem se dostal pár let zpátky, kdy mě zaujaly
-            fotografie a videa vytvořená drony. Možnosti takového dronu se mi
-            zdály obrovské a já se tak po dlouhém zvažování rozhodl pořídit
-            svého drona DJI Mini 2. S ním jsem se naučil a vytvořil několik
-            nádherných fotek a videí. Ačkoliv byly možnosti pozic, úhlů a
-            kompozic obrovské, omezovaly mě zákony, které jeho využití dosti
-            omezovaly a spíš než focení jsem tak řešil je.
+            fotografie a videa tvořené drony. Možnosti takového dronu mi tehdy
+            nechali oči v úžasu a já se tak rozhodl pořídit svého prvního drona
+            DJI Mini 2. S ním jsem si užil mnohé, od tvorby nezapomenutelncýh
+            fotografií krajin po dokumentaci táborů. Časem jsem zjistil, že bych
+            se ale občas držel více při zemi.
           </p>
           <p>
-            Proto jsem se rozhodl držet více při zemi. V mém okolí tehdy navíc
-            nebyl nikdo, kdo by se o focení více zajímal a chyběli mi fotky ze
-            skautských a rodinných akcí. Pořídil jsem si proto svou
-            bezzrcadlovku Sony A6100 společně se setovým objektivem a rozhodl se
-            do focení plně ponořit. Absolvoval jsem kurz na základy focení a můj
-            foťák jsem začal brát na každou všední i nevšední událost.
+            Proto jsem se začal poohlížet po fotoaparátu. V mém okolí tehdy
+            navíc nebyl nikdo, kdo by se o focení více zajímal a chyběli mi
+            fotky ze skautských a rodinných akcí. Pořídil jsem si proto svou
+            první bezzrcadlovku Sony A6100 a rozhodl se do focení plně ponořit.
+            Absolvoval jsem kurz na základy focení a můj foťák jsem začal brát
+            na každou všední i nevšední událost.
           </p>
           <p>
             Dnes mě nejvíc baví hraní se světlem a barvami. Využívání stínů,
-            slunečních paprsků či svitu měsíce je něco úžasného. Jinak ale fotím
-            rád cokoliv, co se mi dostane pod objektiv, ať už se jedná o fotky
+            slunečních paprsků či svitu měsíce je něco úžasného. Fotím rád
+            cokoliv, co se mi dostane pod objektiv, ať už se jedná o fotky
             krajin, ulic či lidí.
           </p>
           <p>
@@ -47,7 +46,7 @@ export default function Galllery() {
         <Block>
           <h2>Galerie</h2>
           <p>
-            Mé portfolio najdeš na mém instagramu{" "}
+            Útržky mého portfolia najdeš na mém instagramu{" "}
             <a
               href={Constants.INSTAGRAM_URL}
               target="_blank"
@@ -55,7 +54,15 @@ export default function Galllery() {
             >
               @{Constants.INSTAGRAM_USERNAME}
             </a>
-            , který slouží jako mé primární místo pro sdílení mých výtvorů.
+            , kde sdílím aktuální tvorbu. Celé porfolio nalezneš na webu{" "}
+            <a
+              href={Constants.PIWIGO_PORTFOLIO}
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              zde
+            </a>
+            .
           </p>
           <Photos quantity={50} />
         </Block>

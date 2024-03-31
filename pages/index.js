@@ -15,7 +15,7 @@ export default function Home() {
       <Header />
       <main>
         <Block>
-          <h1>Vítej</h1>
+          <h1>Vítej mistře</h1>
           <p>
             Jsem mladý, věřím že i potenciální bakalářský student informačních
             technologií se zájmem o síťové technologie a kyberbezpečnost. To
@@ -25,10 +25,11 @@ export default function Home() {
         </Block>
         <Block name="IT" url="/it">
           <p>
-            V IT mě nejvíce zaujala tvorba webů a webových aplikací, které mají
-            nějaký přínos jak pro mě při jejich tvorbě, tak pro ostatní při
-            jejich využívání. Rád přispívám do různorodých open source projektů,
-            stejně tak, jak je rád sám vytvářím.
+            V IT mě nejvíce zaujal návrh a tvorba webů a webových aplikací,
+            které mají nějaký přínos jak pro mě při jejich tvorbě, tak pro
+            ostatní při jejich využívání. Jsem velkým fanouškem open source a
+            krom toho, že z něho často mnohé čerpán, se snažím čas od času také
+            přiložit ruku k dílu a něčím přispět.
           </p>
           <GithubCalendar />
           <p>
@@ -38,10 +39,11 @@ export default function Home() {
         </Block>
         <Block name="Fotografování" url="/photography">
           <p>
-            Mimo IT se také rád věnuji focení. Jedná se spíš o koníček, než
-            profesionální portfolio, přesto se ale snažím každou fotkou posouvat
-            a dělat ji unikátní. Rád si hraji s přirozeným světlem či barvami a
-            fotím po večerech a nocích. Více o mně a fotografování najdeš{" "}
+            Když zrovna pod rukama nemám klávesnici, je velká šance že to bude
+            foťák. Přesto, že se jedná spíš o koníček, než profesionální
+            portfolio, snažím každou fotkou posouvat a dělat ji unikátní. Rád
+            dokumentuji unikátní chvíle a místa, hraju si se světlem, barvami si
+            a fotím po večerech a nocích. Více o mně a fotografování najdeš{" "}
             <Link href="/photography">zde</Link>.
           </p>
           <Photos quantity={10} />

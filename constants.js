@@ -17,8 +17,8 @@ const Constants = {
 
   //Other
   GITHUB_ISSUE: "https://github.com/Th0be/Website/issues/new",
-  PRIMARY_EMAIL_ADDRESS: "th0betheth0be@gmail.com",
-  SECONDARY_EMAIL_ADDRESS: "navrat.tobias@gmail.com",
+  PIWIGO_PORTFOLIO: "https://piwigo.navrattobias.cz",
+  EMAIL_ADDRESS: "kontakt@navrattobias.cz",
 };
 
 export default Constants;

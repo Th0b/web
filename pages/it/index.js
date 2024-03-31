@@ -30,11 +30,9 @@ export default function Projects() {
             rozhodl jsem pro ně.
           </p>
           <p>
-            Dnes se nejvíc věnuji vytváření webů a webových aplikací. Také
-            spravuji několik wordpress webů neziskovým organizacím a sám se
-            snažím vyvíjet nejen různé open source webové aplikace. V minulosti
-            jsem pracoval jako junior front-end developer ve firmě Brainsov
-            Solutions, kde jsem vyvíjel převážně aplikace pro obchodní centra.
+            Dnes se nejvíc věnuji návrhu a vytváření webů a webových aplikací.
+            Také spravuji několik wordpress webů neziskovým organizacím a sám se
+            snažím přispívat v různých open source projektech.
           </p>
         </Block>
         <Block>
@@ -48,7 +46,7 @@ export default function Projects() {
         <Block>
           <h2>Open source projekty</h2>
           <p>
-            Většina mých projektů je open source a je uveřejněna na mém profilu{" "}
+            Většina mých projektů je open source a uveřejněna na mém profilu{" "}
             <a
               href={Constants.GITHUB_URL}
               target="_blank"
@@ -56,8 +54,9 @@ export default function Projects() {
             >
               @{Constants.GITHUB_USERNAME}
             </a>{" "}
-            na platformě GitHub. Ocením každou zpětnou vazbu a nápady na jejich
-            zlepšení. Můžeš otevřít issue, nebo rovnou vytvořit pull request.
+            na githubu. Ocením jakkoukoliv zpětnou vazbu a nápady na jejich
+            zlepšení. Můžeš zde také otevřít issue, nebo rovnou vytvořit pull
+            request.
           </p>
           <Repositories />
         </Block>
