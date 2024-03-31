@@ -1,12 +1,14 @@
 //Hooks
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 //Utils
 import { dataFetch } from "utils/dataFetch";
-import FetchProcess from "components/FetchProcess/FetchProcess.js";
-import { Gallery, Item } from "react-photoswipe-gallery";
 //Styles
 import "photoswipe/dist/photoswipe.css";
 import styles from "./styles/Photos.module.sass";
+// Components
+import { Gallery } from "react-photoswipe-gallery";
+import Photo from "./components/Photo.js";
+import FetchProcess from "components/FetchProcess/FetchProcess.js";
 
 export default function Photos({ quantity }) {
   const [photos, setPhotos] = useState();
@@ -29,35 +31,6 @@ export default function Photos({ quantity }) {
           </div>
         </Gallery>
       )}
-    </>
-  );
-}
-
-function Photo({ image }) {
-  const firstRatio = 3;
-  const secondRatio = 2;
-  const style = {
-    gridColumnEnd: `span ${firstRatio}`,
-    gridRowEnd: `span ${secondRatio}`,
-  };
-  return (
-    <>
-      <Item
-        original={image.element_url}
-        thumbnail={image.derivatives.small.url}
-        width={image.width}
-        height={image.height}
-      >
-        {({ ref, open }) => (
-          <img
-            className={styles.photo}
-            style={style}
-            ref={ref}
-            onClick={open}
-            src={image.derivatives.small.url}
-          />
-        )}
-      </Item>
     </>
   );
 }
