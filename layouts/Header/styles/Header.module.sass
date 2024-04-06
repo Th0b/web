@@ -59,6 +59,7 @@
     .navigation[data-visible=false]
         max-height: 0
     .navigation
+        overflow: hidden
         transition: max-height 0.5s ease-in-out
         float: left
         width: 100%
@@ -91,21 +92,21 @@
                     height: 50px
                     line-height: 40px //random
             li:hover ~ .dot
-                -webkit-transition: all 0.2s ease-in-out
-                transition: all 0.2s ease-in-out
-                opacity: 1
+                    -webkit-transition: all 0.2s ease-in-out
+                    transition: all 0.2s ease-in-out
+                    opacity: 1
             li:nth-child(1):hover ~ .dot
-                -webkit-transform: translateX(36px) translateY(40px)
-                transform: translateX(36px) translateY(40px)
+                    -webkit-transform: translateX(36px) translateY(40px)
+                    transform: translateX(36px) translateY(40px)
             li:nth-child(2):hover ~ .dot
-                -webkit-transform: translateX(92px) translateY(40px)
-                transform: translateX(92px) translateY(40px)
+                    -webkit-transform: translateX(92px) translateY(40px)
+                    transform: translateX(92px) translateY(40px)
             li:nth-child(3):hover ~ .dot
-                -webkit-transform: translateX(180px) translateY(40px)
-                transform: translateX(180px) translateY(40px)
+                    -webkit-transform: translateX(180px) translateY(40px)
+                    transform: translateX(180px) translateY(40px)
             li:nth-child(4):hover ~ .dot
-                -webkit-transform: translateX(285px) translateY(40px)
-                transform: translateX(285px) translateY(40px)
+                    -webkit-transform: translateX(285px) translateY(40px)
+                    transform: translateX(285px) translateY(40px)
             .dot
                 width: 5px
                 height: 5px
